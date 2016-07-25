@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body background="img/celeste.jpg" style="height: 100%; width: 100%;">
+    <body background="img/verde.jpg" style="height: 100%; width: 100%;">
         
             <div class="container" style="position: absolute; left: 370px; top: 140px;">
                 <div class="row">
