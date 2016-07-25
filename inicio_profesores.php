@@ -20,7 +20,7 @@ and open the template in the editor.
             <nav>
                 <div class="nav-wrapper fixed green darken-4">
                     <ul class="right hide-on-med-and-down">
-                        <a class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">exit_to_app</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light blue" href="cerrar_sesion.php"><i class="material-icons">exit_to_app</i></a>
                     </ul>
                 </div>
             </nav>
