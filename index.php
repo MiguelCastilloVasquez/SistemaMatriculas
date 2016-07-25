@@ -16,8 +16,8 @@ and open the template in the editor.
             <div class="nav-wrapper fixed green darken-4">
                 <a href="index.php" class="brand-logo"><img src="img/adventista.png" style="height: 9%; width: 9%;"></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="login.php"><i class="material-icons left">people</i>Profesores</a></li>
-                    <li><a href="login_2.php"><i class="material-icons left">person</i>Administrador</a></li>
+                    <li><a href="login_profesores.php"><i class="material-icons left">people</i>Profesores</a></li>
+                    <li><a href="#"><i class="material-icons left">person</i>Administrador</a></li>
                 </ul>
             </div>
         </nav>
