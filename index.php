@@ -7,11 +7,11 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Inicio</title>
         <link rel="stylesheet" href="css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body>
+    <body style="background: grey">
         <nav>
             <div class="nav-wrapper fixed green darken-4">
                 <a class="brand-logo"><img src="img/adven2.png" class="left"><h5>Sistema de Matrículas CACH</h5></a>
@@ -28,25 +28,55 @@ and open the template in the editor.
         </nav>
 
         <div class="row" >
-            <div class="col s3" style="background: red">
-                <div>
-                    Campo 1
-                    <a href="#">CAS</a>
-                </div>                
-            </div>
-
-            <div class="col s6" style="background: yellowgreen">
-                <div>
-                    Campo 2
+            <!-- Primera Columna -->
+            <div class="col s3">
+                <div class="card-panel teal">
+                    <span class="white-text">Sistema de matriculas creado para los docentes del Colegio Adventista de Chillan.
+                    </span>
                 </div>
             </div>
-
+            <!-- Segunda Columna -->
+            <div class="col s6">
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="img/slider1.jpg"> <!-- random image -->
+                            <div class="caption left-align">
+                                <h3 class="white-text">Colegio Adventista Chillan</h3>
+                                <h5 class="light grey-text text-lighten-3">120 Años</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/slider2.jpg"> <!-- random image -->
+                            <div class="caption left-align">
+                                <h3>Left Aligned Caption</h3>
+                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/slider3.jpg"> <!-- random image -->
+                            <div class="caption right-align">
+                                <h3>Right Aligned Caption</h3>
+                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/slider4.jpg"> <!-- random image -->
+                            <div class="caption center-align">
+                                <h3>This is our big Tagline!</h3>
+                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Tercera Columna -->
             <div class="col s3" style="background: blue">
-                <h5 class="center-align">Imagenes</h5>
+
             </div>
         </div>
 
-        
+
         <!-- Adjuntando los archivos JS -->
         <script src="js/jquery.min.js"></script>
         <script src="js/materialize.min.js"></script>
@@ -54,6 +84,11 @@ and open the template in the editor.
             $(document).ready(function () {
                 $(".button-collapse").sideNav();
             })
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('.slider').slider({full_width: true});
+            });
         </script>
     </body>
 </html>
