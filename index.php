@@ -14,7 +14,7 @@ and open the template in the editor.
     <body>
         <nav>
             <div class="nav-wrapper fixed green darken-4">
-                <a class="brand-logo"><img src="img/adventista.png" style="height: 9%; width: 9%;"></a>
+                <a class="brand-logo"><img src="img/adven2.png"></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="login_profesores.php"><i class="material-icons left">people</i>Profesores</a></li>
                     <li><a href="login_administrador.php"><i class="material-icons left">person</i>Administrador</a></li>
