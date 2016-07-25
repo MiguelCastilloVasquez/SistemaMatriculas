@@ -15,7 +15,12 @@ and open the template in the editor.
         <nav>
             <div class="nav-wrapper fixed green darken-4">
                 <a class="brand-logo"><img src="img/adven2.png"></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
+                    <li><a href="login_profesores.php"><i class="material-icons left">people</i>Profesores</a></li>
+                    <li><a href="login_administrador.php"><i class="material-icons left">person</i>Administrador</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
                     <li><a href="login_profesores.php"><i class="material-icons left">people</i>Profesores</a></li>
                     <li><a href="login_administrador.php"><i class="material-icons left">person</i>Administrador</a></li>
                 </ul>
@@ -41,8 +46,14 @@ and open the template in the editor.
             </div>
         </div>
 
+        
         <!-- Adjuntando los archivos JS -->
         <script src="js/jquery.min.js"></script>
         <script src="js/materialize.min.js"></script>
+        <script >
+            $(document).ready(function () {
+                $(".button-collapse").sideNav();
+            })
+        </script>
     </body>
 </html>
