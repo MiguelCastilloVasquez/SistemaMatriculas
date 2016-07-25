@@ -14,7 +14,7 @@ and open the template in the editor.
     <body>
         <nav>
             <div class="nav-wrapper fixed green darken-4">
-                <a class="brand-logo"><img src="img/adven2.png"></a>
+                <a class="brand-logo"><img src="img/adven2.png" class="left"><h5>Sistema de Matrículas CACH</h5></a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="login_profesores.php"><i class="material-icons left">people</i>Profesores</a></li>
