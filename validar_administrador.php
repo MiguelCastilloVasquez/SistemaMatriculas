@@ -1,7 +1,7 @@
 <?php
     include("conexion_bd.php");
-    $consultaProfesor = "SELECT* FROM profesor WHERE nombre= :nombre AND password= :password";
-    $resultado = $dataBase->prepare($consultaProfesor);
+    $consultaAdmin = "SELECT* FROM administrador WHERE nombre= :nombre AND password= :password";
+    $resultado = $dataBase->prepare($consultaAdmin);
     $nombre = htmlentities(addslashes($_POST["nombre"]));
     $clave = htmlentities(addslashes($_POST["clave"]));
     $resultado->bindValue(":nombre", $nombre);
@@ -10,9 +10,9 @@
     $filas = $resultado->rowCount();
     if($filas != 0){
         session_start();
-        $_SESSION["profesor"]=$_POST["nombre"];
-        header("location:inicio_profesores.php");
+        $_SESSION["administrador"]=$_POST["nombre"];
+        header("location:inicio_administrador.php");
     }else{
-        header("location:login_profesores.php");
+        header("location:login_administrador.php");
     }
 

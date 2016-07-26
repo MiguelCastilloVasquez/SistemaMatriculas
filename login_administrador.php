@@ -10,7 +10,7 @@
             <div class="container" style="position: absolute; left: 370px; top: 140px;">
                 <div class="row">
                     <h5 class="white-text">Iniciar sesión como administrador:</h5>
-                    <form class="col s4" action="#" method="post">
+                    <form class="col s4" action="validar_administrador.php" method="post">
                         <div class="row">
                             <div class="input-field col s10">
                                 <input id="nombre" type="text" class="validate" name="nombre">

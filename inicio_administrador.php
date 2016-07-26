@@ -14,7 +14,7 @@ and open the template in the editor.
     <body>
         <?php
         session_start();
-        if(!isset($_SESSION["profesor"])){
+        if(!isset($_SESSION["administrador"])){
             header("location:index.php");
         }
         ?>
@@ -33,8 +33,9 @@ and open the template in the editor.
                 <div class="col s3">
                     <div class="side-nav fixed green darken-1">
                         <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
-                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Matricular Alumno</a></li>
-                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Editar datos alumno</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Función 1</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Función 2</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Función n</a></li>
                     </div>
                 </div>
             </div>
@@ -57,3 +58,4 @@ and open the template in the editor.
     </script>
      </body>
 </html>
+
