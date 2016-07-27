@@ -26,8 +26,12 @@
                         <p>Padre*</p>
                         <select name="educacion-padre" required class="browser-default">
                             <option value="">---Seleccionar---</option>
-                            <option value="1">Educacion Basica</option>
-                            <option value="2">Educacion Media</option>
+                            <option value="1">Basica Incompleta</option>
+                            <option value="2">Basica Completa</option>
+                            <option value="3">Media Incompleta</option>
+                            <option value="4">Media Completa</option>
+                            <option value="5">Superior Incompleta</option>
+                            <option value="6">Superior Completa</option>
                         </select>
                     </div>
 
@@ -35,8 +39,13 @@
                         <p>Madre*</p>
                         <select required name="educacion-madre" class="browser-default">
                             <option value="" disabled selected>---Seleccionar---</option>
-                            <option value="1">Educacion Basica</option>
-                            <option value="2">Educacion Media</option>
+                            <option value="">---Seleccionar---</option>
+                            <option value="1">Basica Incompleta</option>
+                            <option value="2">Basica Completa</option>
+                            <option value="3">Media Incompleta</option>
+                            <option value="4">Media Completa</option>
+                            <option value="5">Superior Incompleta</option>
+                            <option value="6">Superior Completa</option>
                         </select>
                     </div>
                 </div>
@@ -47,8 +56,10 @@
                             <option value="" disabled selected>---Seleccionar---</option>
                             <option value="1">Padre</option>
                             <option value="2">Madre</option>
-                            <option value="3">Abuelos</option>
-                            <option value="4">Otro</option>
+                            <option value="3">Ambos</option>
+                            <option value="4">Abuelos</option>
+                            <option value="5">Tios</option>
+                            <option value="6">Otro</option>
                         </select>
                     </div>
                 </div>
