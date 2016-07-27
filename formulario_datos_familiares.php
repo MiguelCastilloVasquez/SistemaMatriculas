@@ -6,6 +6,12 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
+        <?php
+            session_start();
+            foreach ($_POST as $clave => $valor) {
+            $_SESSION['sesionform2'][$clave] = $valor;
+            }
+        ?>
         <nav>
             <div class="nav-wrapper fixed green darken-4 z-depth-5">
                 <a href="#" class="brand-logo">Logo</a>
