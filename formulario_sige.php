@@ -54,11 +54,11 @@
                 <div class="row">
                     <div class="col s3">
                         <input type="radio" name="radiogroup" id="en-hogar" value="en el hogar" required/>
-                        <label for="en-hogar">En el hogar </label>
+                        <label for="en-hogar" class="black-text">En el hogar </label>
                     </div>
                     <div class="col s3">
                         <input type="radio" name="radiogroup" id="fuera-hogar" value="fuera del hogar" required/>
-                        <label for="fuera-hogar">Fuera del hogar </label>
+                        <label for="fuera-hogar" class="black-text">Fuera del hogar </label>
                     </div>
                 </div>
                 <div class="row">

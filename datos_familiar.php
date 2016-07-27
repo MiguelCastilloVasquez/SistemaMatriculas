@@ -25,13 +25,13 @@
                     <div class="input-field col s3">
                         <p>Padre*</p>
                         <select name="educacion-padre" required class="browser-default">
-                            <option value="">---Seleccionar---</option>
-                            <option value="1">Basica Incompleta</option>
-                            <option value="2">Basica Completa</option>
-                            <option value="3">Media Incompleta</option>
-                            <option value="4">Media Completa</option>
-                            <option value="5">Superior Incompleta</option>
-                            <option value="6">Superior Completa</option>
+                            <option value="" disabled selected>---Seleccionar---</option>
+                            <option value="basica incompleta">Basica Incompleta</option>
+                            <option value="basica completa">Basica Completa</option>
+                            <option value="media incompleta">Media Incompleta</option>
+                            <option value="media completa">Media Completa</option>
+                            <option value="superior incompleta">Superior Incompleta</option>
+                            <option value="superior completa">Superior Completa</option>
                         </select>
                     </div>
 
@@ -39,13 +39,12 @@
                         <p>Madre*</p>
                         <select required name="educacion-madre" class="browser-default">
                             <option value="" disabled selected>---Seleccionar---</option>
-                            <option value="">---Seleccionar---</option>
-                            <option value="1">Basica Incompleta</option>
-                            <option value="2">Basica Completa</option>
-                            <option value="3">Media Incompleta</option>
-                            <option value="4">Media Completa</option>
-                            <option value="5">Superior Incompleta</option>
-                            <option value="6">Superior Completa</option>
+                            <option value="basica incompleta">Basica Incompleta</option>
+                            <option value="basica completa">Basica Completa</option>
+                            <option value="media incompleta">Media Incompleta</option>
+                            <option value="media completa">Media Completa</option>
+                            <option value="superior incompleta">Superior Incompleta</option>
+                            <option value="superior completa">Superior Completa</option>
                         </select>
                     </div>
                 </div>
@@ -54,12 +53,12 @@
                         <p>Persona con quien vive*</p>
                         <select name="con-quien-vive" required class="browser-default">
                             <option value="" disabled selected>---Seleccionar---</option>
-                            <option value="1">Padre</option>
-                            <option value="2">Madre</option>
-                            <option value="3">Ambos</option>
-                            <option value="4">Abuelos</option>
-                            <option value="5">Tios</option>
-                            <option value="6">Otro</option>
+                            <option value="padre">Padre</option>
+                            <option value="madre">Madre</option>
+                            <option value="ambos">Ambos</option>
+                            <option value="abuelos">Abuelos</option>
+                            <option value="tios">Tios</option>
+                            <option value="otro">Otro</option>
                         </select>
                     </div>
                 </div>
