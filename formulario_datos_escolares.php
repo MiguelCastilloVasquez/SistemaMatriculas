@@ -28,25 +28,26 @@ and open the template in the editor.
         </div>
         <div class="container">
         <div class="row">
-            <form action="#" method="post">
+            <form action="formulario_datos_familiares.php" method="post">
                 <div class="row">
                     <div class="input-field col s4">
-                        <input id="procedencia" type="text" class="validate" name="procedencia">
-                        <label for="procedencia">Procedencia</label>
+                        <input id="procedencia" type="text" class="validate" name="procedencia" required="">
+                        <label for="procedencia">Procedencia*</label>
                     </div>
                     <div class="input-field col s3">
                         <input id="incorporacion" type="date" class="datepicker" name="incorporacion">
-                        <label for="incorporacion">Fecha de Incorporación</label>
+                        <label for="incorporacion">Fecha de Incorporación*</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s3">
-                        <select name="aprendizaje">
+                    <div class="input-field col s4">
+                        <p>¿Posee problemas de aprendizaje?*</p>
+                        <select name="aprendizaje" required class="browser-default">
                             <option value="" disabled selected>Seleccionar</option>
                             <option value="Si">Sí</option>
                             <option value="No">No</option>
                         </select>
-                        <label>¿Posee problemas de aprendizaje?</label>
+                        
                     </div>
                     <div class="input-field col s4">
                         <input id="repeticion" type="text" class="validate" name="repeticion">
@@ -72,9 +73,21 @@ and open the template in the editor.
             $(document).ready(function() {
                 $('.datepicker').pickadate({
                  selectMonths: true, // Creates a dropdown to control month
-                 selectYears: 40 // Creates a dropdown of 15 years to control year
+                 selectYears: 40, // Creates a dropdown of 15 years to control year
+                 labelMonthNext: 'Mes Próximo',
+                 labelMonthPrev: 'Mes previo',
+                 labelMonthSelect: 'Selecciona un mes',
+                 labelYearSelect: 'Selecciona un año',
+                 monthsFull: [ 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre' ],
+                 monthsShort: [ 'Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic' ],
+                 weekdaysFull: [ 'Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado' ],
+                 weekdaysShort: [ 'Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab' ],
+                 weekdaysLetter: [ 'D', 'L', 'M', 'M', 'J', 'V', 'S' ],
+                 today: 'Hoy',
+                 clear: 'Limpiar',
+                 close: 'Cerrar'
                  });
-            });
+            }); 
         </script>
     </body>
 </html>

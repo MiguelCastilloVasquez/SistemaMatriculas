@@ -32,40 +32,42 @@ and open the template in the editor.
                         <label for="anio">Año</label>
                     </div>
                     <div class="input-field col s3">
-                        <input id="run" type="text" class="validate" name="run">
-                        <label for="run">RUT</label>
+                        <input id="run" type="text" class="validate" name="run" required>
+                        <label for="run">RUT*</label>
                     </div>
                 </div>
         <div class="row">
             <div class="input-field col s3">
-                <input id="paterno" type="text" class="validate" name="paterno">
-                <label for="paterno">Apellido Paterno</label>
+                <input id="paterno" type="text" class="validate" name="paterno" required>
+                <label for="paterno">Apellido Paterno*</label>
             </div>
             <div class="input-field col s3">
-                <input id="materno" type="text" class="validate" name="materno">
-                <label for="materno">Apellido Materno</label>
+                <input id="materno" type="text" class="validate" name="materno" required>
+                <label for="materno">Apellido Materno*</label>
             </div>
             <div class="input-field col s6">
-                <input id="nombre" type="text" class="validate" name="nombre">
-                <label for="nombre">Nombres</label>
+                <input id="nombre" type="text" class="validate" name="nombre" required>
+                <label for="nombre">Nombres*</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s2">
-                <select name="sexo">
-                    <option value="" disabled selected>Seleccionar</option>
+                <p class="left">Sexo*</p>
+                <select name="sexo" required class="browser-default">
+                    <option value="" disabled selected>--Seleccionar--</option>
                     <option value="Femenino">Femenino</option>
                     <option value="Masculino">Masculino</option>
                 </select>
-                <label>Sexo</label>
+                
             </div>
             <div class="input-field col s3">
                 <input id="nacimiento" type="date" class="datepicker" name="nacimiento">
-                <label for="nacimiento">Fecha de Nacimiento</label>
+                <label for="nacimiento">Fecha de Nacimiento*</label>
             </div>
             <div class="input-field col s2">
-                <select name="edad">
-                    <option value="" disabled selected>Seleccionar</option>
+                <p class="left">Edad*</p>
+                <select name="edad" required class="browser-default">
+                    <option value="" disabled selected>--Seleccionar--</option>
                     <option value="11">11</option>
                     <option value="12">12</option>
                     <option value="13">13</option>
@@ -77,17 +79,16 @@ and open the template in the editor.
                     <option value="19">19</option>
                     <option value="20">20</option>
                 </select>
-                <label>Edad</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s5">
-                <input id="domicilio" type="text" class="validate" name="domicilio">
-                <label for="domicilio">Domicilio</label>
+                <input id="domicilio" type="text" class="validate" name="domicilio" required>
+                <label for="domicilio">Domicilio*</label>
             </div>
             <div class="input-field col s3">
-                <input id="comuna" type="text" class="validate" name="comuna">
-                <label for="comuna">Comuna</label>
+                <input id="comuna" type="text" class="validate" name="comuna" required>
+                <label for="comuna">Comuna*</label>
             </div>
         </div>
         <div class="row">
@@ -116,9 +117,22 @@ and open the template in the editor.
             $(document).ready(function() {
                 $('.datepicker').pickadate({
                  selectMonths: true, // Creates a dropdown to control month
-                 selectYears: 40 // Creates a dropdown of 15 years to control year
+                 selectYears: 40, // Creates a dropdown of 15 years to control year
+                 labelMonthNext: 'Mes Próximo',
+                 labelMonthPrev: 'Mes previo',
+                 labelMonthSelect: 'Selecciona un mes',
+                 labelYearSelect: 'Selecciona un año',
+                 monthsFull: [ 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre' ],
+                 monthsShort: [ 'Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic' ],
+                 weekdaysFull: [ 'Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado' ],
+                 weekdaysShort: [ 'Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab' ],
+                 weekdaysLetter: [ 'D', 'L', 'M', 'M', 'J', 'V', 'S' ],
+                 today: 'Hoy',
+                 clear: 'Limpiar',
+                 close: 'Cerrar'
                  });
-            });
+            }); 
         </script>
+
     </body>
 </html>
