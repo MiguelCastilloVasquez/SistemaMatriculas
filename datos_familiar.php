@@ -23,33 +23,33 @@
                     <h5 class="center">Datos Familiar</h5>
                     <div class="row"><p>I. NIVEL EDUCACIONAL PADRES</p></div>
                     <div class="input-field col s3">
-                        <select name="educacion-padre" required>
+                        <p>Padre*</p>
+                        <select name="educacion-padre" required class="browser-default">
                             <option value="">---Seleccionar---</option>
                             <option value="1">Educacion Basica</option>
                             <option value="2">Educacion Media</option>
                         </select>
-                        <label>Padre*</label>
                     </div>
 
                     <div class="input-field col s3">
-                        <select required name="educacion-madre">
+                        <p>Madre*</p>
+                        <select required name="educacion-madre" class="browser-default">
                             <option value="" disabled selected>---Seleccionar---</option>
                             <option value="1">Educacion Basica</option>
                             <option value="2">Educacion Media</option>
                         </select>
-                        <label>Madre*</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s3">
-                        <select name="con-quien-vive" required>
+                        <p>Persona con quien vive*</p>
+                        <select name="con-quien-vive" required class="browser-default">
                             <option value="" disabled selected>---Seleccionar---</option>
                             <option value="1">Padre</option>
                             <option value="2">Madre</option>
                             <option value="3">Abuelos</option>
                             <option value="4">Otro</option>
                         </select>
-                        <label>Persona con quien vive*</label>
                     </div>
                 </div>
                 <div class="row">
@@ -67,12 +67,12 @@
                 <div class="row">
                     <div class="input-field col s4">
                         <input id="domiclio-tutor" type="text" class="validate" name="domicilio-tutor" required>
-                        <label>Domicilio*</label>
+                        <label for="domicilio-tutor">Domicilio*</label>
                     </div>
 
                     <div class="input-field col s3 push-s1">
                         <input id="emergencia-tutor" type="text" class="validate" name="emergencia-tutor" required>
-                        <label>Numero emergencia*</label>
+                        <label for="emergencia-tutor" data-error="formato incorrecto">Numero emergencia*</label>
                     </div>
                 </div>
                 <div class="row">
