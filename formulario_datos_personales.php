@@ -25,7 +25,7 @@ and open the template in the editor.
         </div>
         <div class="container">
         <div class="row">
-            <form class="col s12" action="formulario_2.php" method="post">
+            <form class="col s12" action="formulario_datos_escolares.php" method="post">
                 <div class="row">
                     <div class="input-field col s1">
                         <input disabled value="<?php echo $anio ?>" id="anio" type="text" class="validate" name="anio">
