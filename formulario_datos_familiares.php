@@ -18,7 +18,7 @@
         </nav>
 
         <div class="container" style="margin-top: 50px">
-            <form class="col s12" action="#">
+            <form class="col s12" action="formulario_sige.php" method="post">
                 <div class="row">
                     <h5 class="center">Datos Familiar</h5>
                     <div class="row"><p>I. NIVEL EDUCACIONAL PADRES</p></div>

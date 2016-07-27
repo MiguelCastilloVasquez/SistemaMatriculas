@@ -19,7 +19,7 @@
         </nav>
 
         <div class="container" style="margin-top: 50px">
-            <form class="col s12" action="#">
+            <form class="col s12" action="#" method="post">
                 <h5 class="center">Formulario SIGE</h5>
                 <div class="row">
                     <div class="col s9">
