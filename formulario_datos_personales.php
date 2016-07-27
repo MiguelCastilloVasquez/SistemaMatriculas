@@ -13,6 +13,12 @@ and open the template in the editor.
     </head>
     <body style="background: #e5e4e4">
         <?php
+        session_start();
+        if(!isset($_SESSION["profesor"])){
+            header("location:index.php");
+        }
+        ?>
+        <?php
             $anio = date("Y");
         ?>
         <nav class="green darken-4">

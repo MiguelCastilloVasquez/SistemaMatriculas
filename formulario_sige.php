@@ -9,6 +9,9 @@
     <body>
         <?php
             session_start();
+            if(!isset($_SESSION["profesor"])){
+            header("location:index.php");
+            }
             foreach ($_POST as $clave => $valor) {
             $_SESSION['sesionform3'][$clave] = $valor;
             }

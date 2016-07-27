@@ -14,6 +14,9 @@ and open the template in the editor.
     <body style="background: #e5e4e4">
         <?php
             session_start();
+            if(!isset($_SESSION["profesor"])){
+            header("location:index.php");
+            }
             foreach ($_POST as $clave => $valor) {
             $_SESSION['sesionform1'][$clave] = $valor;
             }

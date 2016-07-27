@@ -33,7 +33,7 @@ and open the template in the editor.
                 <div class="col s3">
                     <div class="side-nav fixed green darken-1">
                         <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
-                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Matricular Alumno</a></li>
+                        <li><a href="formulario_datos_personales.php" class="amber-text text-accent-1" style="font-size: 17px;">Matricular Alumno</a></li>
                         <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Editar datos alumno</a></li>
                     </div>
                 </div>
