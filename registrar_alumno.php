@@ -9,6 +9,7 @@
     extract($_SESSION['sesionform4']);
     include("conexion_bd.php");
     if(isset($_POST['enviar'])){
+        $curso = "1°A";
         //Insertando datos escolares
         $insertarDatosEscolares = "INSERT INTO escolar (procedencia, fecha_incorporacion, problema_aprend, curso_repetido) "
                 . "VALUES (:proc, :fecha_inc, :prob_aprend, :curso_rep)";
@@ -27,17 +28,24 @@
         $resultadoInsertarApoderado = $dataBase->prepare($insertarDatosApoderado);
         $resultadoInsertarApoderado->execute(array(":nom" => $nombre_tutor, ":ape" => $apellido_tutor,
             ":dom" => $domicilio_tutor, ":corr" => $correo_tutor, ":fon_emerg" => $emergencia_tutor));
-        //
-        
-        
-        $insertarAlumno = "INSERT INTO alumno (a_paterno, a_materno, nombres, sexo ,rut, f_nacimiento, edad, domicilio, comuna, Familiar_identificador_fam, Sige_identificador_sige, Escolar_identificador_esc, Retiro_identificador_retiro, Apoderado_identificador_apod)"
-                . "VALUES (:pat,:mat,:nom,:sexo,:rut,:fnac,:edad,:dom,:com, :idfam, :idsige, :idesc, :idret, :idapod)";
+        $rs = mysql_query("SELECT MAX(identificador_apod) AS id FROM apoderado");
+        //Insertando datos SIGE
+        $insertarDatosSige = "INSERT INTO sige (proced_indigena, situacion_laboral_asoc, lugar_trab_asoc, nivel_educacional_asoc) "
+                . "VALUES (:ind, :sit_lab, :trab_asoc, :sit_acad)";
+        $resultadoInsertarDatosSige = $dataBase->prepare($insertarDatosSige);
+        $resultadoInsertarDatosSige->execute(array(":ind" => $procedencia_indigena, ":sit_lab" => $situacion_laboral,
+            ":trab_asoc" => $lugar_trabajo, ":sit_acad" => $educacion_asociado));
+        //Insertando datos alumno
+        $insertarAlumno = "INSERT INTO alumno (a_paterno, a_materno, nombres, sexo ,rut, f_nacimiento, edad, domicilio, comuna, problema_salud, Familiar_identificador_fam, Sige_identificador_sige, Escolar_identificador_esc, Retiro_identificador_retiro, Apoderado_identificador_apod, Curso_identificador_curso)"
+                . "VALUES (:pat,:mat,:nom,:sexo,:rut,:fnac,:edad,:dom,:com, :prob_sal, :idfam, :idsige, :idesc, :idret, :idapod, :idCurso)";
         $resultadoInsertarAlumno=$dataBase->prepare($insertarAlumno);
         $resultadoInsertarAlumno->execute(array(":pat"=>$paterno,":mat"=>$materno,":nom"=>$nombre,
-            ":sexo"=>$sexo,":rut"=>$run,":fnac"=>$nacimiento,":edad"=>$edad,":dom"=>$domicilio,":com"=>$comuna,":idfam"=>$id_fam, 
-            ":idsige"=>$id_sige,":idesc"=>$id_esc, ":idret"=>$id_ret, ":idapod"=>$id_apod));
+            ":sexo"=>$sexo,":rut"=>$run,":fnac"=>$nacimiento,":edad"=>$edad,":dom"=>$domicilio,":com"=>$comuna,
+            ":prob_sal" => $enfermedad, ":idfam"=>$id, ":idsige"=>$id,":idesc"=>$id, ":idret"=>$id, ":idapod"=>$id, ":idCurso" => $curso));
         
         unset($_SESSION['sesionform1']);
         unset($_SESSION['sesionform2']);
+        unset($_SESSION['sesionform3']);
+        unset($_SESSION['sesionform4']);
         header("Location:inicio_profesores.php");
     }

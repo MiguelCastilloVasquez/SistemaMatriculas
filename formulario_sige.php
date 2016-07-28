@@ -24,11 +24,11 @@
         </nav>
 
         <div class="container" style="margin-top: 50px">
-            <form class="col s12" action="#" method="post">   
+            <form class="col s12" action="registrar_alumno.php" method="post">   
                 <div class="row">
                     <div class="col s4">
                         <p>Procedencia Indigena</p>
-                        <select name="procedencia-indigena">
+                        <select name="procedencia_indigena">
                             <option value="">Ninguna</option>
                             <option value="mapuche">Mapuche</option>
                         </select>
@@ -40,7 +40,7 @@
                             cursado por la persona asociada al estudiante. (Si la persona esta estudiando, 
                             indique el nivel que se encuentra cursando)
                         </p>
-                        <select name="educacion-padre" required class="browser-default">
+                        <select name="educacion_asociado" required class="browser-default">
                             <option value="">---Seleccionar---</option>
                             <option value="1">Educacion Basica</option>
                             <option value="2">Educacion Media</option>
@@ -51,7 +51,7 @@
                     <div class="col s9">
                         <p>¿Cual es la situacion laboral de la persona asociada al estudiante? Seleccione una Alternativa.
                         </p>
-                        <select name="educacion-padre" required class="browser-default">
+                        <select name="situacion_laboral" required class="browser-default">
                             <option value="">---Seleccionar---</option>
                             <option value="1">Educacion Basica</option>
                             <option value="2">Educacion Media</option>
@@ -65,20 +65,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col s3">
-                        <input type="radio" name="radiogroup" id="en-hogar" value="en el hogar" required/>
-                        <label for="en-hogar" class="black-text">En el hogar </label>
-                    </div>
-                    <div class="col s3">
-                        <input type="radio" name="radiogroup" id="fuera-hogar" value="fuera del hogar" required/>
-                        <label for="fuera-hogar" class="black-text">Fuera del hogar </label>
-                    </div>
+                    <select name="lugar_trabajo" required class="browser-default">
+                            <option value="">---Seleccionar---</option>
+                            <option value="En el hogar">En el hogar</option>
+                            <option value="Fuera del hogar">Fuera del hogar</option>
+                        </select>
                 </div>
                 <div class="row">
 
                 </div>
                 <div class="row">
-                    <button class="btn waves-effect waves-light" type="submit" name="siguiente">Enviar
+                    <button class="btn waves-effect waves-light" type="submit" name="enviar">Enviar
                         <i class="material-icons right">fast_forward</i>
                     </button>
                 </div>
