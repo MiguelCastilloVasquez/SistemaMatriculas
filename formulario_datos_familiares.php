@@ -7,21 +7,18 @@
     </head>
     <body>
         <?php
-            session_start();
-            if(!isset($_SESSION["profesor"])){
+        session_start();
+        if (!isset($_SESSION["profesor"])) {
             header("location:index.php");
-            }
-            foreach ($_POST as $clave => $valor) {
+        }
+        foreach ($_POST as $clave => $valor) {
             $_SESSION['sesionform2'][$clave] = $valor;
-            }
+        }
         ?>
         <nav>
             <div class="nav-wrapper fixed green darken-4 z-depth-5">
-                <a href="#" class="brand-logo">Logo</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
+                <a class="brand-logo"><img src="img/adven2.png" class="left"><h5>Sistema de Matrículas CACH</h5></a>
+                <a class="brand-logo center"><h5>Datos Familiares</h5></a>
                 </ul>
             </div>
         </nav>
@@ -29,7 +26,6 @@
         <div class="container" style="margin-top: 50px">
             <form class="col s12" action="formulario_sige.php" method="post">
                 <div class="row">
-                    <h5 class="center">Datos Familiar</h5>
                     <div class="row"><p>I. NIVEL EDUCACIONAL PADRES</p></div>
                     <div class="input-field col s3">
                         <p>Padre*</p>
