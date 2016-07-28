@@ -70,23 +70,26 @@
                 <div class="row">
                     <div class="row"><p>II. APODERADO O TUTOR</p></div>
                     <div class="input-field col s3">
-                        <input id="nombre-tutor" type="text" class="validate" name="nombre-tutor" required>
+                        <input id="nombre-tutor" type="text" class="validate" name="nombre_tutor" required>
                         <label>Nombre*</label>
                     </div>
 
                     <div class="input-field col s3 push-s1">
-                        <input id="apellido-tutor" type="text" class="validate" name="apellido-tutor" required>
+                        <input id="apellido-tutor" type="text" class="validate" name="apellido_tutor" required>
                         <label>Apellido*</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s4">
-                        <input id="domiclio-tutor" type="text" class="validate" name="domicilio-tutor" required>
+                        <input id="domiclio-tutor" type="text" class="validate" name="domicilio_tutor" required>
                         <label for="domicilio-tutor">Domicilio*</label>
                     </div>
-
-                    <div class="input-field col s3 push-s1">
-                        <input id="emergencia-tutor" type="text" class="validate" name="emergencia-tutor" required>
+                    <div class="input-field col s4">
+                        <input id="correo_tutor" type="email" class="validate" name="correo_tutor" required>
+                        <label for="correo_tutor" data-error="formato incorrecto">Correo*</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <input id="emergencia-tutor" type="text" class="validate" name="emergencia_tutor" required>
                         <label for="emergencia-tutor" data-error="formato incorrecto">Numero emergencia*</label>
                     </div>
                 </div>

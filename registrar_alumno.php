@@ -22,6 +22,14 @@
         $resultadoInsertarDatosFamiliares->execute(array(":nep" => $educacion_padre, ":nem" => $educacion_madre,
             "cqv" => $con_quien_vive));
         //Insertando datos apoderado
+        $insertarDatosApoderado = "INSERT INTO apoderado (nombre, apellido, domicilio, correo, fono_emerg) "
+                . "VALUES (:nom, :ape, :dom, :corr, :fon_emerg)";
+        $resultadoInsertarApoderado = $dataBase->prepare($insertarDatosApoderado);
+        $resultadoInsertarApoderado->execute(array(":nom" => $nombre_tutor, ":ape" => $apellido_tutor,
+            ":dom" => $domicilio_tutor, ":corr" => $correo_tutor, ":fon_emerg" => $emergencia_tutor));
+        //
+        
+        
         $insertarAlumno = "INSERT INTO alumno (a_paterno, a_materno, nombres, sexo ,rut, f_nacimiento, edad, domicilio, comuna, Familiar_identificador_fam, Sige_identificador_sige, Escolar_identificador_esc, Retiro_identificador_retiro, Apoderado_identificador_apod)"
                 . "VALUES (:pat,:mat,:nom,:sexo,:rut,:fnac,:edad,:dom,:com, :idfam, :idsige, :idesc, :idret, :idapod)";
         $resultadoInsertarAlumno=$dataBase->prepare($insertarAlumno);
