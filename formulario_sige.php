@@ -8,13 +8,13 @@
     </head>
     <body>
         <?php
-            session_start();
-            if(!isset($_SESSION["profesor"])){
+        session_start();
+        if (!isset($_SESSION["profesor"])) {
             header("location:index.php");
-            }
-            foreach ($_POST as $clave => $valor) {
+        }
+        foreach ($_POST as $clave => $valor) {
             $_SESSION['sesionform3'][$clave] = $valor;
-            }
+        }
         ?>
         <nav>
             <div class="nav-wrapper fixed green darken-4 z-depth-5">
@@ -24,7 +24,16 @@
         </nav>
 
         <div class="container" style="margin-top: 50px">
-            <form class="col s12" action="#" method="post">            
+            <form class="col s12" action="#" method="post">   
+                <div class="row">
+                    <div class="col s4">
+                        <p>Procedencia Indigena</p>
+                        <select name="procedencia-indigena">
+                            <option value="">Ninguna</option>
+                            <option value="mapuche">Mapuche</option>
+                        </select>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col s9">
                         <p>Indique el ultimo nivel educacional 
