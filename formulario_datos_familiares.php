@@ -33,7 +33,7 @@
                     <div class="row"><p>I. NIVEL EDUCACIONAL PADRES</p></div>
                     <div class="input-field col s3">
                         <p>Padre*</p>
-                        <select name="educacion-padre" required class="browser-default">
+                        <select name="educacion_padre" required class="browser-default">
                             <option value="" disabled selected>---Seleccionar---</option>
                             <option value="basica incompleta">Basica Incompleta</option>
                             <option value="basica completa">Basica Completa</option>
@@ -46,7 +46,7 @@
 
                     <div class="input-field col s3">
                         <p>Madre*</p>
-                        <select required name="educacion-madre" class="browser-default">
+                        <select required name="educacion_madre" class="browser-default">
                             <option value="" disabled selected>---Seleccionar---</option>
                             <option value="basica incompleta">Basica Incompleta</option>
                             <option value="basica completa">Basica Completa</option>
@@ -60,7 +60,7 @@
                 <div class="row">
                     <div class="input-field col s3">
                         <p>Persona con quien vive*</p>
-                        <select name="con-quien-vive" required class="browser-default">
+                        <select name="con_quien_vive" required class="browser-default">
                             <option value="" disabled selected>---Seleccionar---</option>
                             <option value="padre">Padre</option>
                             <option value="madre">Madre</option>
