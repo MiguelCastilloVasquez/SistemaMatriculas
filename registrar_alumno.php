@@ -9,7 +9,6 @@
     extract($_SESSION['sesionform4']);
     include("conexion_bd.php");
     if(isset($_POST['enviar'])){
-        $curso = "1°A";
         //Insertando datos escolares
         $insertarDatosEscolares = "INSERT INTO escolar (procedencia, fecha_incorporacion, problema_aprend, curso_repetido) "
                 . "VALUES (:proc, :fecha_inc, :prob_aprend, :curso_rep)";
@@ -35,13 +34,21 @@
         $resultadoInsertarDatosSige = $dataBase->prepare($insertarDatosSige);
         $resultadoInsertarDatosSige->execute(array(":ind" => $procedencia_indigena, ":sit_lab" => $situacion_laboral,
             ":trab_asoc" => $lugar_trabajo, ":sit_acad" => $educacion_asociado));
+        //Insertando datos retiro
+        $fecha_retiro = "";
+        $motivo_retiro = "";
+        $insertarRetiro = "INSERT INTO retiro (fecha_retiro, motivo_retiro) "
+                . "VALUES (:fec_ret, :mot_ret)";
+        $resultadoInsertarRetiro = $dataBase->prepare($insertarRetiro);
+        $resultadoInsertarRetiro->execute(array(":fec_ret" => $fecha_retiro, "mot_ret" => $motivo_retiro));
+        $id = $dataBase->lastInsertId();
         //Insertando datos alumno
         $insertarAlumno = "INSERT INTO alumno (a_paterno, a_materno, nombres, sexo ,rut, f_nacimiento, edad, domicilio, comuna, problema_salud, Familiar_identificador_fam, Sige_identificador_sige, Escolar_identificador_esc, Retiro_identificador_retiro, Apoderado_identificador_apod, Curso_identificador_curso)"
                 . "VALUES (:pat,:mat,:nom,:sexo,:rut,:fnac,:edad,:dom,:com, :prob_sal, :idfam, :idsige, :idesc, :idret, :idapod, :idCurso)";
         $resultadoInsertarAlumno=$dataBase->prepare($insertarAlumno);
         $resultadoInsertarAlumno->execute(array(":pat"=>$paterno,":mat"=>$materno,":nom"=>$nombre,
             ":sexo"=>$sexo,":rut"=>$run,":fnac"=>$nacimiento,":edad"=>$edad,":dom"=>$domicilio,":com"=>$comuna,
-            ":prob_sal" => $enfermedad, ":idfam"=>$id, ":idsige"=>$id,":idesc"=>$id, ":idret"=>$id, ":idapod"=>$id, ":idCurso" => $curso));
+            ":prob_sal" => $enfermedad, ":idfam"=>$id, ":idsige"=>$id,":idesc"=>$id, ":idret"=>$id, ":idapod"=>$id, ":idCurso" => $id));
         
         unset($_SESSION['sesionform1']);
         unset($_SESSION['sesionform2']);
