@@ -18,18 +18,13 @@
         ?>
         <nav>
             <div class="nav-wrapper fixed green darken-4 z-depth-5">
-                <a href="#" class="brand-logo">Logo</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
-                </ul>
+                <a class="brand-logo"><img src="img/adven2.png" class="left"><h5>Sistema de Matrículas CACH</h5></a>
+                <a class="brand-logo center"><h5>Datos SIGE</h5></a>
             </div>
         </nav>
 
         <div class="container" style="margin-top: 50px">
-            <form class="col s12" action="#" method="post">
-                <h5 class="center">Formulario SIGE</h5>
+            <form class="col s12" action="#" method="post">            
                 <div class="row">
                     <div class="col s9">
                         <p>Indique el ultimo nivel educacional 
