@@ -44,6 +44,30 @@ and open the template in the editor.
                         </div>
                     </div>
                     <div class="row">
+                        <div class="input-field col s4">
+                            <p class="left">Curso año: <?php echo $anio ?></p>
+                            <select name="curso" required class="browser-default">
+                                <option value="" disabled selected>--Seleccionar--</option>
+                                <option value="1">1° Medio A</option>
+                                <option value="2">1° Medio B</option>
+                                <option value="3">1° Medio C</option>
+                                <option value="4">1° Medio D</option>
+                                <option value="5">2° Medio A</option>
+                                <option value="6">2° Medio B</option>
+                                <option value="7">2° Medio C</option>
+                                <option value="8">2° Medio D</option>
+                                <option value="9">3° Medio A</option>
+                                <option value="10">3° Medio B</option>
+                                <option value="11">3° Medio C</option>
+                                <option value="12">3° Medio D</option>
+                                <option value="13">4° Medio A</option>
+                                <option value="14">4° Medio B</option>
+                                <option value="15">4° Medio C</option>
+                                <option value="16">4° Medio D</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="input-field col s3">
                             <input id="paterno" type="text" class="validate" name="paterno" required>
                             <label for="paterno">Apellido Paterno*</label>
@@ -62,8 +86,8 @@ and open the template in the editor.
                             <p class="left">Sexo*</p>
                             <select name="sexo" required class="browser-default">
                                 <option value="" disabled selected>--Seleccionar--</option>
-                                <option value="Femenino">Femenino</option>
-                                <option value="Masculino">Masculino</option>
+                                <option value="F">Femenino</option>
+                                <option value="M">Masculino</option>
                             </select>
 
                         </div>
