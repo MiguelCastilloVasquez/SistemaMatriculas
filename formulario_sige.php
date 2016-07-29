@@ -30,7 +30,16 @@
                         <p>Procedencia Indigena</p>
                         <select name="procedencia_indigena">
                             <option value="">Ninguna</option>
-                            <option value="mapuche">Mapuche</option>
+                            <option value="Aymara">Aymara</option>
+                            <option value="Atacameño">Atacameño</option>
+                            <option value="Colla">Colla</option>
+                            <option value="Diaguita">Diaguita</option>
+                            <option value="Quecha">Quechua</option>
+                            <option value="Rapa Nui">Rapa Nui</option>
+                            <option value="Mapuche">Mapuche</option>
+                            <option value="Diaguita">Diaguita</option>
+                            <option value="Kawashkar(Alacalufe)">Kawashkar(Alacalufe)</option>
+                            <option value="Yamana">Yagan</option>
                         </select>
                     </div>
                 </div>
@@ -40,10 +49,28 @@
                             cursado por la persona asociada al estudiante. (Si la persona esta estudiando, 
                             indique el nivel que se encuentra cursando)
                         </p>
-                        <select name="educacion_asociado" required class="browser-default">
+                        <select name="educacion_asociado">
                             <option value="">---Seleccionar---</option>
-                            <option value="1">Educacion Basica</option>
-                            <option value="2">Educacion Media</option>
+                            <option value="1° año de educacion basica">1° año de educacion basica</option>
+                            <option value="2° año de educacion basica">2° año de educacion basica</option>
+                            <option value="3° año de educacion basica">3° año de educacion basica</option>
+                            <option value="4° año de educacion basica">4° año de educacion basica</option>
+                            <option value="5° año de educacion basica">5° año de educacion basica</option>
+                            <option value="6° año de educacion basica">6° año de educacion basica</option>
+                            <option value="7° año de educacion basica">7° año de educacion basica</option>
+                            <option value="8° año de educacion basica">8° año de educacion basica</option>
+                            <option value="1° año de educacion media">1° año de educacion media</option>
+                            <option value="2° año de educacion media">2° año de educacion media</option>
+                            <option value="3° año de educacion media">3° año de educacion media</option>
+                            <option value="4° año de educacion media Cientifico o Humanista">4° año de educacion media Cientifico o Humanista</option>
+                            <option value="4° o 5° año de educacion media Tecnico Profesional o Vocacional">4° o 5° año de educacion media Tecnico Profesional o Vocacional</option>
+                            <option value="Educacion en un Centro de Formacion Tecnica o Instituto Profesional en curso o imcompleta">Educacion en un Centro de Formacion Tecnica o Instituto Profesional en curso o imcompleta</option>
+                            <option value="Titulado de un Centro de Formacion Tecnica o Instituto Profesional">Titulado de un Centro de Formacion Tecnica o Instituto Profesional</option>
+                            <option value="Educacion Universitaria en curso o incompleta">Educacion Universitaria en curso o incompleta</option>
+                            <option value="Titulado de una Universidad">Titulado de una Universidad</option>
+                            <option value="Estudiante o titulado de magister">Estudiante o titulado de magister</option>
+                            <option value="Estudiante o titulado de doctorado">Estudiante o titulado de doctorado</option>
+                            <option value="No sabe o no recuerda">No sabe o no recuerda</option>
                         </select>
                     </div>
                 </div>
@@ -51,10 +78,12 @@
                     <div class="col s9">
                         <p>¿Cual es la situacion laboral de la persona asociada al estudiante? Seleccione una Alternativa.
                         </p>
-                        <select name="situacion_laboral" required class="browser-default">
+                        <select name="situacion_laboral">
                             <option value="">---Seleccionar---</option>
-                            <option value="1">Educacion Basica</option>
-                            <option value="2">Educacion Media</option>
+                            <option value="Trabaja jornada completa">Trabaja jornada completa (todo el dia)</option>
+                            <option value="Trabaja jornada parcial">Trabaja jornada parcial (medio dia o algunas horas al dia)</option>
+                            <option value="No trabaja en este momento, pero esta en busqueda de trabajo">No trabaja en este momento, pero esta en busqueda de trabajo (cesante o busca trabajo por primera vez)</option>
+                            <option value="No trabaja y no esta en busqueda de trabajo">No trabaja y no esta en busqueda de trabajo (dueña de casa, jubilado, pensionado, etc.)</option>
                         </select>
                     </div>
                 </div>
@@ -65,11 +94,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <select name="lugar_trabajo" required class="browser-default">
+                    <div class="col s4">
+                        <select name="lugar_trabajo" required class="browser-default">
                             <option value="">---Seleccionar---</option>
                             <option value="En el hogar">En el hogar</option>
                             <option value="Fuera del hogar">Fuera del hogar</option>
                         </select>
+                    </div>
                 </div>
                 <div class="row">
 
