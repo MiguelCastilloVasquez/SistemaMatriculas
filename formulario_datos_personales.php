@@ -1,3 +1,7 @@
+<?php
+$conexion = mysql_connect("localhost", "root", "");
+$db = mysql_select_db("adventista", $conexion);
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -45,26 +49,17 @@ and open the template in the editor.
                     </div>
                     <div class="row">
                         <div class="input-field col s4">
-                            <p class="left">Curso año: <?php echo $anio ?></p>
-                            <select name="curso" required class="browser-default">
-                                <option value="" disabled selected>--Seleccionar--</option>
-                                <option value="1">1° Medio A</option>
-                                <option value="2">1° Medio B</option>
-                                <option value="3">1° Medio C</option>
-                                <option value="4">1° Medio D</option>
-                                <option value="5">2° Medio A</option>
-                                <option value="6">2° Medio B</option>
-                                <option value="7">2° Medio C</option>
-                                <option value="8">2° Medio D</option>
-                                <option value="9">3° Medio A</option>
-                                <option value="10">3° Medio B</option>
-                                <option value="11">3° Medio C</option>
-                                <option value="12">3° Medio D</option>
-                                <option value="13">4° Medio A</option>
-                                <option value="14">4° Medio B</option>
-                                <option value="15">4° Medio C</option>
-                                <option value="16">4° Medio D</option>
-                            </select>
+                            <p>Curso año: <?php echo $anio ?></p>
+                            <?php
+                            $consulta_mysql = "select * from curso where anio_curso='$anio'";
+                            $resultado_consulta_mysql = mysql_query($consulta_mysql, $conexion);
+                            echo "<select name='curso' required>";
+                            echo "<option value=''>---Seleccionar---</option>";
+                            while ($fila = mysql_fetch_array($resultado_consulta_mysql)) {
+                                echo "<option value='" . $fila['identificador_curso'] . "'>" . $fila['seccion'] . "</option>";
+                            }
+                            echo "</select>";
+                            ?>
                         </div>
                     </div>
                     <div class="row">
