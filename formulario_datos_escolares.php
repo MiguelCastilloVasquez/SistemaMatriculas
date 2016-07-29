@@ -48,8 +48,8 @@ and open the template in the editor.
                             <p>¿Posee problemas de aprendizaje?*</p>
                             <select name="aprendizaje" required class="browser-default">
                                 <option value="" disabled selected>Seleccionar</option>
-                                <option value="Si">Sí</option>
-                                <option value="No">No</option>
+                                <option value="C">Sí</option>
+                                <option value="S">No</option>
                             </select>
 
                         </div>
