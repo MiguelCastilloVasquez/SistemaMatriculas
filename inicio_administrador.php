@@ -21,7 +21,7 @@ and open the template in the editor.
          <!-- Navbar goes here -->
          <div class="row">
             <nav>
-                <div class="nav-wrapper fixed green darken-4">
+                <div class="nav-wrapper fixed green darken-4 z-depth-5">
                     <ul class="right hide-on-med-and-down">
                         <a class="btn-floating btn-large waves-effect waves-light blue" href="cerrar_sesion.php"><i class="material-icons">exit_to_app</i></a>
                     </ul>
@@ -33,9 +33,10 @@ and open the template in the editor.
                 <div class="col s3">
                     <div class="side-nav fixed green darken-1">
                         <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
-                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Función 1</a></li>
-                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Función 2</a></li>
-                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Función n</a></li>
+                        <li><a href="agregar_profesor.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black"">Añadir Profesor</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Editar Alumno</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Retirar Alumno</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Generar Documento</a></li>
                     </div>
                 </div>
             </div>

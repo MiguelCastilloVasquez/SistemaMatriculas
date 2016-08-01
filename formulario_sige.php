@@ -37,7 +37,6 @@
                             <option value="Quecha">Quechua</option>
                             <option value="Rapa Nui">Rapa Nui</option>
                             <option value="Mapuche">Mapuche</option>
-                            <option value="Diaguita">Diaguita</option>
                             <option value="Kawashkar(Alacalufe)">Kawashkar(Alacalufe)</option>
                             <option value="Yamana">Yagan</option>
                         </select>
