@@ -33,9 +33,10 @@ and open the template in the editor.
                 <div class="col s3">
                     <div class="side-nav fixed green darken-1">
                         <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
-                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Función 1</a></li>
-                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Función 2</a></li>
-                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Función n</a></li>
+                        <li><a href="agregar_profesor.php" class="amber-text text-accent-1" style="font-size: 17px;">Añadir Profesor</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Editar Alumno</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Retirar Alumno</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px;">Generar Documento</a></li>
                     </div>
                 </div>
             </div>
