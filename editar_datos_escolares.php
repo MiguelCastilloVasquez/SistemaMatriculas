@@ -24,6 +24,13 @@ and open the template in the editor.
         $fecha_incorporacion = filter_input(INPUT_GET, 'F_inc');
         $problema_aprendizaje = filter_input(INPUT_GET, 'P_apr');
         $curso_repetido = filter_input(INPUT_GET, 'Cur');
+        function problema_aprendizaje($condicion){
+            if(strcmp($condicion, "C")==0){
+                echo "Sí";
+            }else{
+                echo "No";
+            }
+        }
         ?>
         <nav class="green darken-4">
             <div class="nav-wrapper fixed">
@@ -49,7 +56,7 @@ and open the template in the editor.
                         <div class="input-field col s4">
                             <p>¿Posee problemas de aprendizaje?*</p>
                             <select name="aprendizaje" required class="browser-default">
-                                <option value="" disabled selected>Seleccionar</option>
+                                <option value="<?php problema_aprendizaje($problema_aprendizaje); ?>" selected><?php problema_aprendizaje($problema_aprendizaje); ?></option>
                                 <option value="C">Sí</option>
                                 <option value="S">No</option>
                             </select>
