@@ -19,7 +19,6 @@ and open the template in the editor.
             $datosEscolares = $dataBase->query($consultaDatosEscolares)->fetchAll(PDO::FETCH_OBJ);
         ?>
         <div class="container">
-            <form method="post">
         <table>
             <thead>
                 <tr>
@@ -43,7 +42,6 @@ and open the template in the editor.
                 </tr>
             <?php endforeach; ?>
         </table>
-                </form>
         </div>
     <!-- Adjuntando los archivos JS -->
     <script src="js/jquery.min.js"></script>

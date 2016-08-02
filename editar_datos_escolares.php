@@ -32,9 +32,9 @@ and open the template in the editor.
         </nav>
         <div class="container">
             <div class="row">
-                <form action="#" method="post">
-                    <input id="id" type="text" class="validate" name="id" value="<?php echo $id ?>">
-                    <label for="id">Id</label>
+                <form action="upadate_escolar.php" method="post">
+                    <input id="id" type="hidden" class="validate" name="id" value="<?php echo $id ?>">
+                    <label for="id"></label>
                     <div class="row">
                         <div class="input-field col s4">
                             <input id="procedencia" type="text" class="validate" name="procedencia" required value="<?php echo $procedencia ?>">
@@ -61,8 +61,8 @@ and open the template in the editor.
                         </div>
                     </div>
                     <div class="row">
-                        <button class="btn waves-effect waves-light green" type="submit" name="pasarATres">Siguiente
-                            <i class="material-icons right">fast_forward</i>
+                        <button class="btn waves-effect waves-light green" type="submit" name="guardar">Guardar
+                            <i class="material-icons right">save</i>
                         </button>
                     </div>
                 </form>

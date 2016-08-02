@@ -2,12 +2,9 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
         <group>
-            <file>file:/C:/xampp/htdocs/SistemaMatriculas/inicio_editar.php</file>
+            <file>file:/C:/xampp/htdocs/SistemaMatriculas/editar_datos_escolares.php</file>
+            <file>file:/C:/xampp/htdocs/SistemaMatriculas/datos_alumno.php</file>
         </group>
-=======
-        <group/>
->>>>>>> 16ef6839b05f4eb78a42ae45652bb275b6de2b05
     </open-files>
 </project-private>

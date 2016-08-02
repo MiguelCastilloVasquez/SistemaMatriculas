@@ -8,11 +8,14 @@
     <body>
         <?php
             include("conexion_bd.php");
-            $rut = filter_input(INPUT_POST, 'rut');
-            $anio = filter_input(INPUT_POST, 'anio');
+            foreach ($_POST as $clave => $valor) {
+                $_SESSION['sesionform'][$clave] = $valor;
+            }
+            extract($_SESSION['sesionform']);
             $consultaDatos = "SELECT id_alumno, nombres, rut, a_paterno, a_materno "
                     . "FROM alumno WHERE anio_alumno='$anio' and rut='$rut'";
             $datosTabla=$dataBase->query($consultaDatos)->fetchAll(PDO::FETCH_OBJ);
+            unset($_SESSION['sesionform']);
         ?>
         <nav>
             <div class="nav-wrapper fixed">
