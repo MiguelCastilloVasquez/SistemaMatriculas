@@ -28,19 +28,23 @@ and open the template in the editor.
                 </div>
             </nav>
          </div>
-         <div class="row">
+          <div class="row">
             <div class="container">
                 <div class="col s3">
                     <div class="side-nav fixed green darken-1">
                         <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
-                        <li><a href="agregar_profesor.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black"">Añadir Profesor</a></li>
-                        <li><a href="#" class="amber-text text-accent-1" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Editar Alumno</a></li>
-                        <li><a href="#" class="amber-text text-accent-1" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Retirar Alumno</a></li>
-                        <li><a href="#" class="amber-text text-accent-1" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Generar Documento</a></li>
+                        <li><a href="agregar_profesor.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Añadir Profesor</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Editar Alumno</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Retirar Alumno</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Egresar Alumno</a></li>
+                        <li><a href="agregar_curso.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Agregar Curso</a></li>
+                        <li><a href="filtrar_curso.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Listar Cursos</a></li>
+                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Generar Documento</a></li>
                     </div>
                 </div>
             </div>
-         </div>
+        </div>
+
          
 
      

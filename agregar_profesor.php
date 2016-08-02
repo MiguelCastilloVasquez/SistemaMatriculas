@@ -29,8 +29,8 @@
                 <ul class="right hide-on-med-and-down">
                     <a class="btn-floating btn-large waves-effect waves-light blue" href="inicio_administrador.php"><i class="material-icons">home</i></a>
                 </ul>
-                <a class="brand-logo"><img src="img/adven2.png" class="left"><h5>Sistema de Matrículas CACH</h5></a>
-                <a class="brand-logo center"><h5>Agregar Profesor</h5></a>
+                <a class="brand-logo"><img src="img/adven2.png" class="left"><h5 class="amber-text text-accent-1" style="text-shadow: 2px 2px 4px black">Sistema de Matrículas CACH</h5></a>
+                <a class="brand-logo center"><h5 class="amber-text text-accent-1" style="text-shadow: 2px 2px 4px black">Agregar Profesor</h5></a>
             </div>
         </nav>
 
