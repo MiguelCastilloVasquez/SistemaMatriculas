@@ -26,11 +26,17 @@ and open the template in the editor.
             $consultaDatosSige = "select* from sige where identificador_sige = '$id' ";
             $datosSige = $dataBase->query($consultaDatosSige)->fetchAll(PDO::FETCH_OBJ);
         ?>
-        <nav class="green darken-4">
-            <div class="nav-wrapper fixed">
-                
-            </div>
-        </nav>
+        <div class="row">
+            <nav>
+                <div class="nav-wrapper fixed green darken-4">
+                    <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
+                    <ul class="right hide-on-med-and-down">
+                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="cerrar_sesion.php" style=" margin-top: 3px;"><i class="material-icons">exit_to_app</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="inicio_profesores.php" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
+                    </ul>
+                </div>
+            </nav>
+         </div>
         <div class="container col s12" style="margin-top: 40px;">
             <h5 class="center grey-text text-darken-1">Datos Personales</h5>
             <table class="bordered highlight centered responsive-table">
@@ -45,7 +51,7 @@ and open the template in the editor.
                     <th class="white-text">Edad</th>
                     <th class="white-text">Domicilio</th>
                     <th class="white-text">Comuna</th>
-                    <th class="white-text">Probl. aprendizaje</th>
+                    <th class="white-text">Probl. Salud</th>
                 </thead>
                 <?php foreach ($datosPersonales as $personal): ?>
                     <tr>
