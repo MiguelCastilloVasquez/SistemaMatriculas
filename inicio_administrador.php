@@ -36,7 +36,7 @@ and open the template in the editor.
                         <li><a href="agregar_profesor.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Añadir Profesor</a></li>
                         <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Editar Alumno</a></li>
                         <li><a href="retirar_alumno.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Retirar Alumno</a></li>
-                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Egresar Alumno</a></li>
+                        <li><a href="egresar_alumno.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Egresar Alumno</a></li>
                         <li><a href="agregar_curso.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Agregar Curso</a></li>
                         <li><a href="filtrar_curso.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Listar Cursos</a></li>
                         <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Generar Documento</a></li>
