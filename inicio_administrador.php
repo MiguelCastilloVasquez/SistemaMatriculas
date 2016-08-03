@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Inicio Administrador</title>
         <link rel="stylesheet" href="css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
@@ -23,7 +23,7 @@ and open the template in the editor.
             <nav>
                 <div class="nav-wrapper fixed green darken-4 z-depth-5">
                     <ul class="right hide-on-med-and-down">
-                        <a class="btn-floating btn-large waves-effect waves-light blue" href="cerrar_sesion.php"><i class="material-icons">exit_to_app</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light red" href="cerrar_sesion.php"><i class="material-icons">exit_to_app</i></a>
                     </ul>
                 </div>
             </nav>
@@ -35,7 +35,7 @@ and open the template in the editor.
                         <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
                         <li><a href="agregar_profesor.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Añadir Profesor</a></li>
                         <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Editar Alumno</a></li>
-                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Retirar Alumno</a></li>
+                        <li><a href="retirar_alumno.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Retirar Alumno</a></li>
                         <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Egresar Alumno</a></li>
                         <li><a href="agregar_curso.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Agregar Curso</a></li>
                         <li><a href="filtrar_curso.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Listar Cursos</a></li>
