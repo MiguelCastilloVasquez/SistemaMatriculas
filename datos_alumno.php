@@ -116,7 +116,9 @@ and open the template in the editor.
                         <td class="blue-text text-darken-4"><?php echo $familiar->nivel_educ_padre ?></td>
                         <td class="blue-text text-darken-4"><?php echo $familiar->nivel_educ_madre ?></td>
                         <td class="blue-text text-darken-4"><?php echo $familiar->con_quien_vive ?></td>
-                        <td><a class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
+                        <td><a href="editar_datos_familiares.php?Id=<?php echo $familiar->identificador_fam ?> 
+                               & nep=<?php echo $familiar->nivel_educ_padre ?> & nem=<?php echo $familiar->nivel_educ_madre ?> 
+                               & cqv=<?php echo $familiar->con_quien_vive ?>" class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
                     </tr>
                 <?php endforeach; ?>
             </table>

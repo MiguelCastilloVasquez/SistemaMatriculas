@@ -24,13 +24,6 @@
             $dom = filter_input(INPUT_GET, 'dom');
             $com = filter_input(INPUT_GET, 'com');
             $probl_salud = filter_input(INPUT_GET, 'probl');
-            function retornaSexo($sexo_persona){
-                if(strcmp($sexo_persona, "F")==0){
-                    echo "Femenino";
-                }else{
-                    echo "Masculino";
-                }
-            }
         ?>
         <nav class="green darken-4">
             <div class="nav-wrapper fixed">
@@ -66,7 +59,7 @@
                         <div class="input-field col s2">
                             <p class="left">Sexo*</p>
                             <select name="sexo" required class="browser-default">
-                                <option value="<?php retornaSexo($sexo)?>" selected><?php retornaSexo($sexo)?></option>
+                                <option value="<?php echo $sexo ?>" selected><?php echo $sexo ?></option>
                                 <option value="F">Femenino</option>
                                 <option value="M">Masculino</option>
                             </select>
