@@ -25,13 +25,20 @@
             $com = filter_input(INPUT_GET, 'com');
             $probl_salud = filter_input(INPUT_GET, 'probl');
         ?>
-        <nav class="green darken-4">
-            <div class="nav-wrapper fixed">
-                
-            </div>
-        </nav>
+        <div class="row">
+            <nav>
+                <div class="nav-wrapper fixed green darken-4">
+                    <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
+                    <ul class="right hide-on-med-and-down">
+                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="cerrar_sesion.php" style=" margin-top: 3px;"><i class="material-icons">exit_to_app</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="inicio_profesores.php" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
+                    </ul>
+                </div>
+            </nav>
+         </div>
         <div class="container" style="margin-top: 30px;">
             <div class="row">
+                <h5 class="teal-text text-darken-4">Editar datos personales</h5>
                 <form class="col s12" action="update_datos_personales.php" method="post">
                     <div class="row">
                         <input id="id" type="hidden" class="validate" name="id" value="<?php echo $id ?>">

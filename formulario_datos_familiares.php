@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body>
+    <body style="background: #e5e4e4">
         <?php
         session_start();
         if (!isset($_SESSION["profesor"])) {
@@ -26,7 +26,7 @@
         <div class="container" style="margin-top: 50px">
             <form class="col s12" action="formulario_sige.php" method="post">
                 <div class="row">
-                    <div class="row"><p>I. NIVEL EDUCACIONAL PADRES</p></div>
+                    <p>I. NIVEL EDUCACIONAL PADRES</p>
                     <div class="input-field col s3">
                         <p>Padre*</p>
                         <select name="educacion_padre" required class="browser-default">
@@ -39,7 +39,6 @@
                             <option value="Superior Completa">Superior Completa</option>
                         </select>
                     </div>
-
                     <div class="input-field col s3">
                         <p>Madre*</p>
                         <select required name="educacion_madre" class="browser-default">

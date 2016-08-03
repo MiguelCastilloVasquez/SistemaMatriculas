@@ -36,11 +36,11 @@ and open the template in the editor.
             <div class="row" style="margin-top: 40px;">
                 <form class="col s12" action="buscar_alumno.php" method="post">
                     <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s2">
                             <input placeholder="Digite aquí el rut" id="rut" type="text" class="validate" name="rut" required>
                             <label for="rut" class="blue-text text-darken-4" style="font-size: 15px;">RUT</label>
                         </div>
-                        <div class="input-field col s6">
+                        <div class="input-field col s2 offset-s2">
                             <input placeholder="Digite aquí el año" id="anio" type="text" class="validate" name="anio" required>
                             <label for="anio" class="blue-text text-darken-4" style="font-size: 15px;">Año</label>
                         </div>

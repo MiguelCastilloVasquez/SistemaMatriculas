@@ -25,13 +25,20 @@ and open the template in the editor.
         $problema_aprendizaje = filter_input(INPUT_GET, 'P_apr');
         $curso_repetido = filter_input(INPUT_GET, 'Cur');
         ?>
-        <nav class="green darken-4">
-            <div class="nav-wrapper fixed">
-                
-            </div>
-        </nav>
+        <div class="row">
+            <nav>
+                <div class="nav-wrapper fixed green darken-4">
+                    <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
+                    <ul class="right hide-on-med-and-down">
+                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="cerrar_sesion.php" style=" margin-top: 3px;"><i class="material-icons">exit_to_app</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="inicio_profesores.php" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
+                    </ul>
+                </div>
+            </nav>
+         </div>
         <div class="container">
             <div class="row">
+                <h5 class="teal-text text-darken-4">Editar datos escolares</h5>
                 <form action="upadate_escolar.php" method="post">
                     <input id="id" type="hidden" class="validate" name="id" value="<?php echo $id ?>">
                     <label for="id"></label>
@@ -61,7 +68,7 @@ and open the template in the editor.
                         </div>
                     </div>
                     <div class="row">
-                        <button class="btn waves-effect waves-light green" type="submit" name="guardar">Guardar
+                        <button class="btn waves-effect waves-light teal darken-4" type="submit" name="guardar">Guardar
                             <i class="material-icons right">save</i>
                         </button>
                     </div>
