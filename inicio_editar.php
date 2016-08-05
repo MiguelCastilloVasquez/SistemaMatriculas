@@ -72,8 +72,7 @@ and open the template in the editor.
         <script>
             $(document).ready(function () {
                $('#rut').Rut({
-                 on_error: function(){ alert('Rut incorrecto'); },
-                 on_success: function(){ alert('Rut correcto'); }   
+                 on_error: function(){ alert('Rut incorrecto'); }   
                });
             });
         </script>

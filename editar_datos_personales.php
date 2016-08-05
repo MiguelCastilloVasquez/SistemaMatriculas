@@ -154,8 +154,7 @@
          <script>
             $(document).ready(function () {
                $('#run').Rut({
-                 on_error: function(){ alert('Rut incorrecto'); },
-                 on_success: function(){ alert('Rut correcto'); }   
+                 on_error: function(){ alert('Rut incorrecto'); }  
                });
             });
         </script>
