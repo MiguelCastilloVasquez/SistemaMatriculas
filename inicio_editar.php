@@ -23,8 +23,6 @@ and open the template in the editor.
         }elseif(isset($_SESSION["administrador"])){
             $home = "inicio_administrador.php";
         }
-            
-        
         ?>
          <!-- Navbar goes here -->
          <div class="row">
@@ -64,12 +62,21 @@ and open the template in the editor.
         <!-- Adjuntando los archivos JS -->
         <script src="js/jquery.min.js"></script>
         <script src="js/materialize.min.js"></script>
+        <script src="js/jquery.Rut.js"></script>
         <script>
            $(document).ready(function () {
                 $(".button-collapse").sideNav();
             });
    
-    </script>
+        </script>
+        <script>
+            $(document).ready(function () {
+               $('#rut').Rut({
+                 on_error: function(){ alert('Rut incorrecto'); },
+                 on_success: function(){ alert('Rut correcto'); }   
+               });
+            });
+        </script>
      </body>
 </html>
 
