@@ -24,6 +24,29 @@ and open the template in the editor.
         ?>
         <?php
         $anio = date("Y");
+        function validaRut($rut){
+            $rut = preg_replace('/[^k0-9]/i', '', $rut);
+            $dv  = substr($rut, -1);
+            $numero = substr($rut, 0, strlen($rut)-1);
+            $i = 2;
+            $suma = 0;
+            foreach(array_reverse(str_split($numero)) as $v)
+            {
+            if($i==8)
+                $i = 2;
+                $suma += $v * $i;
+                ++$i;
+            }
+             $dvr = 11 - ($suma % 11);
+            if($dvr == 11)
+                $dvr = 0;
+            if($dvr == 10)
+                $dvr = 'K';
+            if($dvr == strtoupper($dv))
+                return "rut válido";
+            else
+                return "rut inválido";
+        }
         ?>
         <nav class="green darken-4">
             <div class="nav-wrapper fixed">
@@ -134,6 +157,7 @@ and open the template in the editor.
         <!-- Adjuntando los archivos JS -->
         <script src="js/jquery.min.js"></script>
         <script src="js/materialize.min.js"></script>
+        <script src="js/jquery.Rut.js"></script>
         <script>
             $(document).ready(function () {
                 $('select').material_select();
@@ -159,6 +183,13 @@ and open the template in the editor.
                 });
             });
         </script>
-
+        <script>
+            $(document).ready(function () {
+               $('#run').Rut({
+                 on_error: function(){ alert('Rut incorrecto'); },
+                 on_success: function(){ alert('Rut correcto'); }   
+               });
+            });
+        </script>
     </body>
 </html>

@@ -14,6 +14,10 @@ and open the template in the editor.
     <body style="background: #e7e4e5">
         <?php
             include ("conexion_bd.php");
+            session_start();
+                if(!isset($_SESSION["profesor"])){
+                header("location:index.php");
+            }
             $id = filter_input(INPUT_GET, 'ID');
             $consultaDatosPersonales = "select id_alumno, rut, a_paterno, a_materno, nombres, sexo, f_nacimiento, edad, domicilio, comuna, problema_salud from alumno where id_alumno = '$id' ";
             $datosPersonales = $dataBase->query($consultaDatosPersonales)->fetchAll(PDO::FETCH_OBJ);

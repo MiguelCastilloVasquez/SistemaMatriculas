@@ -34,7 +34,7 @@ and open the template in the editor.
                     <div class="side-nav fixed green darken-1">
                         <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
                         <li><a href="agregar_profesor.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Añadir Profesor</a></li>
-                        <li><a href="#" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Editar Alumno</a></li>
+                        <li><a href="inicio_editar.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Editar Alumno</a></li>
                         <li><a href="retirar_alumno.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Retirar Alumno</a></li>
                         <li><a href="egresar_alumno.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Egresar Alumno</a></li>
                         <li><a href="agregar_curso.php" class="amber-text text-accent-1" style="font-size: 17px; text-shadow: 2px 2px 4px black">Agregar Curso</a></li>

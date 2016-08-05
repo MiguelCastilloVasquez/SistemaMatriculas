@@ -8,6 +8,10 @@
     <body style="background-color: #f5f8f4">
         <?php
             include("conexion_bd.php");
+            session_start();
+                if(!isset($_SESSION["profesor"])){
+                header("location:index.php");
+            }
             foreach ($_POST as $clave => $valor) {
                 $_SESSION['sesionform'][$clave] = $valor;
             }

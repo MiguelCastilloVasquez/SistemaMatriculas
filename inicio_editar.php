@@ -18,8 +18,7 @@ and open the template in the editor.
             header("location:index.php");
         }
         ?>
-         <!-- Navbar goes here -->
-         <div class="row">
+        <div class="row">
             <nav>
                 <div class="nav-wrapper fixed green darken-4">
                     <a class="brand-logo"><img src="img/adven2.png" class="left"></a>

@@ -31,8 +31,10 @@
         </div>
         <div class="container" style="margin-top: 50px">
             <h5 class="teal-text text-darken-4">Editar datos SIGE</h5>
-            <form class="col s12" action="#" method="post">   
+            <form class="col s12" action="update_datos_sige.php" method="post">   
                 <div class="row">
+                    <input id="id" type="hidden" class="validate" name="id" value="<?php echo $id ?>">
+                    <label for="id"></label>
                     <div class="col s4">
                         <p class="blue-grey-text">Procedencia Indigena</p>
                         <select name="procedencia_indigena">
