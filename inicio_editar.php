@@ -14,24 +14,34 @@ and open the template in the editor.
     <body style="background-color: #f5f8f4">
         <?php
         session_start();
-        if(!isset($_SESSION["profesor"])){
+        if (!isset($_SESSION["profesor"]) && !isset($_SESSION["administrador"])) {
             header("location:index.php");
         }
+
+        if (isset($_SESSION["profesor"])) {
+            $home = "inicio_profesores.php";
+        } elseif (isset($_SESSION["administrador"])) {
+            $home = "inicio_administrador.php";
+        }
         ?>
+<<<<<<< HEAD
+=======
+        <!-- Navbar goes here -->
+>>>>>>> edad6d72c06572ca585ec759177f4d670390ddc2
         <div class="row">
             <nav>
                 <div class="nav-wrapper fixed green darken-4">
                     <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
                     <ul class="right hide-on-med-and-down">
                         <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="cerrar_sesion.php" style=" margin-top: 3px;"><i class="material-icons">exit_to_app</i></a>
-                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="inicio_profesores.php" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="<?php echo $home?>" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
                     </ul>
                 </div>
             </nav>
-         </div>
-         
-         <div class="container" style="margin-top: 40px;">
-             <h5 class="blue-text text-darken-4">Buscar alumno</h5>
+        </div>
+
+        <div class="container" style="margin-top: 40px;">
+            <h5 class="blue-text text-darken-4">Buscar alumno</h5>
             <div class="row" style="margin-top: 40px;">
                 <form class="col s12" action="buscar_alumno.php" method="post">
                     <div class="row">
@@ -46,8 +56,8 @@ and open the template in the editor.
                     </div>
                     <div class="row">
                         <a><button class="btn waves-effect waves-light blue darken-4" type="submit" name="buscar">Buscar
-                            <i class="material-icons right">search</i>
-                        </button></a>
+                                <i class="material-icons right">search</i>
+                            </button></a>
                     </div>
                 </form>
             </div>
@@ -56,11 +66,11 @@ and open the template in the editor.
         <script src="js/jquery.min.js"></script>
         <script src="js/materialize.min.js"></script>
         <script>
-           $(document).ready(function () {
+            $(document).ready(function () {
                 $(".button-collapse").sideNav();
             });
-   
-    </script>
-     </body>
+
+        </script>
+    </body>
 </html>
 

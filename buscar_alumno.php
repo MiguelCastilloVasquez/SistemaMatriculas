@@ -7,6 +7,7 @@
     </head>
     <body style="background-color: #f5f8f4">
         <?php
+<<<<<<< HEAD
             include("conexion_bd.php");
             session_start();
                 if(!isset($_SESSION["profesor"])){
@@ -20,6 +21,28 @@
                     . "FROM alumno WHERE anio_alumno='$anio' and rut='$rut'";
             $datosTabla=$dataBase->query($consultaDatos)->fetchAll(PDO::FETCH_OBJ);
             unset($_SESSION['sesionform']);
+=======
+        session_start();
+        if (!isset($_SESSION["profesor"]) && !isset($_SESSION["administrador"])) {
+            header("location:index.php");
+        }
+
+        if (isset($_SESSION["profesor"])) {
+            $inicio = "inicio_profesores.php";
+        } elseif (isset($_SESSION["administrador"])) {
+            $inicio = "inicio_administrador.php";
+        }
+
+        include("conexion_bd.php");
+        foreach ($_POST as $clave => $valor) {
+            $_SESSION['sesionform'][$clave] = $valor;
+        }
+        extract($_SESSION['sesionform']);
+        $consultaDatos = "SELECT id_alumno, nombres, rut, a_paterno, a_materno "
+                . "FROM alumno WHERE anio_alumno='$anio' and rut='$rut'";
+        $datosTabla = $dataBase->query($consultaDatos)->fetchAll(PDO::FETCH_OBJ);
+        unset($_SESSION['sesionform']);
+>>>>>>> edad6d72c06572ca585ec759177f4d670390ddc2
         ?>
         <div class="row">
             <nav>
@@ -27,7 +50,7 @@
                     <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
                     <ul class="right hide-on-med-and-down">
                         <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="cerrar_sesion.php" style=" margin-top: 3px;"><i class="material-icons">exit_to_app</i></a>
-                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="inicio_profesores.php" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="<?php echo $inicio ?>" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
                     </ul>
                 </div>
             </nav>

@@ -8,7 +8,7 @@
     <body style="background: #e5e4e4">
         <?php
         session_start();
-        if (!isset($_SESSION["profesor"])) {
+        if (!isset($_SESSION["profesor"]) && !isset($_SESSION["administrador"])) {
             header("location:index.php");
         }
         $id = filter_input(INPUT_GET, 'Id');
