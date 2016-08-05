@@ -11,6 +11,11 @@
         if (!isset($_SESSION["profesor"]) && !isset($_SESSION["administrador"])) {
             header("location:index.php");
         }
+        if(isset($_SESSION["profesor"])){
+            $hom = "inicio_profesores.php";
+        }elseif(isset($_SESSION["administrador"])){
+            $hom = "inicio_administrador.php";
+        }
         ?>
         <?php
             $id = filter_input(INPUT_GET, 'Id');
@@ -31,7 +36,7 @@
                     <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
                     <ul class="right hide-on-med-and-down">
                         <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="cerrar_sesion.php" style=" margin-top: 3px;"><i class="material-icons">exit_to_app</i></a>
-                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="inicio_profesores.php" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="<?php echo $hom?>" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
                     </ul>
                 </div>
             </nav>

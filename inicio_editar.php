@@ -14,21 +14,20 @@ and open the template in the editor.
     <body style="background-color: #f5f8f4">
         <?php
         session_start();
-        if (!isset($_SESSION["profesor"]) && !isset($_SESSION["administrador"])) {
+        if(!isset($_SESSION["profesor"])&&!isset($_SESSION["administrador"])){
             header("location:index.php");
         }
-
-        if (isset($_SESSION["profesor"])) {
+        
+        if(isset($_SESSION["profesor"])){
             $home = "inicio_profesores.php";
-        } elseif (isset($_SESSION["administrador"])) {
+        }elseif(isset($_SESSION["administrador"])){
             $home = "inicio_administrador.php";
         }
+            
+        
         ?>
-<<<<<<< HEAD
-=======
-        <!-- Navbar goes here -->
->>>>>>> edad6d72c06572ca585ec759177f4d670390ddc2
-        <div class="row">
+         <!-- Navbar goes here -->
+         <div class="row">
             <nav>
                 <div class="nav-wrapper fixed green darken-4">
                     <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
@@ -38,26 +37,26 @@ and open the template in the editor.
                     </ul>
                 </div>
             </nav>
-        </div>
-
-        <div class="container" style="margin-top: 40px;">
-            <h5 class="blue-text text-darken-4">Buscar alumno</h5>
+         </div>
+         
+         <div class="container" style="margin-top: 40px;">
+             <h5 class="blue-text text-darken-4">Buscar alumno</h5>
             <div class="row" style="margin-top: 40px;">
                 <form class="col s12" action="buscar_alumno.php" method="post">
                     <div class="row">
-                        <div class="input-field col s2">
+                        <div class="input-field col s6">
                             <input placeholder="Digite aquí el rut" id="rut" type="text" class="validate" name="rut" required>
                             <label for="rut" class="blue-text text-darken-4" style="font-size: 15px;">RUT</label>
                         </div>
-                        <div class="input-field col s2 offset-s2">
+                        <div class="input-field col s6">
                             <input placeholder="Digite aquí el año" id="anio" type="text" class="validate" name="anio" required>
                             <label for="anio" class="blue-text text-darken-4" style="font-size: 15px;">Año</label>
                         </div>
                     </div>
                     <div class="row">
                         <a><button class="btn waves-effect waves-light blue darken-4" type="submit" name="buscar">Buscar
-                                <i class="material-icons right">search</i>
-                            </button></a>
+                            <i class="material-icons right">search</i>
+                        </button></a>
                     </div>
                 </form>
             </div>
@@ -66,11 +65,11 @@ and open the template in the editor.
         <script src="js/jquery.min.js"></script>
         <script src="js/materialize.min.js"></script>
         <script>
-            $(document).ready(function () {
+           $(document).ready(function () {
                 $(".button-collapse").sideNav();
             });
-
-        </script>
-    </body>
+   
+    </script>
+     </body>
 </html>
 

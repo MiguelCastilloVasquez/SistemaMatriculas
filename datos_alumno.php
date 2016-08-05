@@ -13,24 +13,6 @@ and open the template in the editor.
     </head>
     <body style="background: #e7e4e5">
         <?php
-<<<<<<< HEAD
-            include ("conexion_bd.php");
-            session_start();
-                if(!isset($_SESSION["profesor"])){
-                header("location:index.php");
-            }
-            $id = filter_input(INPUT_GET, 'ID');
-            $consultaDatosPersonales = "select id_alumno, rut, a_paterno, a_materno, nombres, sexo, f_nacimiento, edad, domicilio, comuna, problema_salud from alumno where id_alumno = '$id' ";
-            $datosPersonales = $dataBase->query($consultaDatosPersonales)->fetchAll(PDO::FETCH_OBJ);
-            $consultaDatosEscolares = "select* from escolar where identificador_esc = '$id' ";
-            $datosEscolares = $dataBase->query($consultaDatosEscolares)->fetchAll(PDO::FETCH_OBJ);
-            $consultaDatosFamiliares = "select* from familiar where identificador_fam = '$id' ";
-            $datosFamiliares = $dataBase->query($consultaDatosFamiliares)->fetchAll(PDO::FETCH_OBJ);
-            $consultaDatosApoderado = "select* from apoderado where identificador_apod = '$id' ";
-            $datosApoderado = $dataBase->query($consultaDatosApoderado)->fetchAll(PDO::FETCH_OBJ);
-            $consultaDatosSige = "select* from sige where identificador_sige = '$id' ";
-            $datosSige = $dataBase->query($consultaDatosSige)->fetchAll(PDO::FETCH_OBJ);
-=======
         session_start();
         if (!isset($_SESSION["profesor"]) && !isset($_SESSION["administrador"])) {
             header("location:index.php");
@@ -41,6 +23,9 @@ and open the template in the editor.
         } elseif (isset($_SESSION["administrador"])) {
             $ini = "inicio_administrador.php";
         }
+
+
+
         include ("conexion_bd.php");
         $id = filter_input(INPUT_GET, 'ID');
         $consultaDatosPersonales = "select id_alumno, rut, a_paterno, a_materno, nombres, sexo, f_nacimiento, edad, domicilio, comuna, problema_salud from alumno where id_alumno = '$id' ";
@@ -53,7 +38,6 @@ and open the template in the editor.
         $datosApoderado = $dataBase->query($consultaDatosApoderado)->fetchAll(PDO::FETCH_OBJ);
         $consultaDatosSige = "select* from sige where identificador_sige = '$id' ";
         $datosSige = $dataBase->query($consultaDatosSige)->fetchAll(PDO::FETCH_OBJ);
->>>>>>> edad6d72c06572ca585ec759177f4d670390ddc2
         ?>
         <div class="row">
             <nav>
@@ -61,7 +45,7 @@ and open the template in the editor.
                     <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
                     <ul class="right hide-on-med-and-down">
                         <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="cerrar_sesion.php" style=" margin-top: 3px;"><i class="material-icons">exit_to_app</i></a>
-                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="inicio_profesores.php" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="<?php echo $ini?>" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
                     </ul>
                 </div>
             </nav>
@@ -171,10 +155,7 @@ and open the template in the editor.
                         <td class="blue-text text-darken-4"><?php echo $apoderado->domicilio ?></td>
                         <td class="blue-text text-darken-4"><?php echo $apoderado->correo ?></td>
                         <td class="blue-text text-darken-4"><?php echo $apoderado->fono_emerg ?></td>
-                        <td><a href="editar_datos_apoderado.php?Id=<?php echo $apoderado->identificador_apod ?> 
-                               & nom=<?php echo $apoderado->nombre ?> & ape=<?php echo $apoderado->apellido ?> 
-                               & dom=<?php echo $apoderado->domicilio ?> & corr=<?php echo $apoderado->correo ?> 
-                               & fon=<?php echo $apoderado->fono_emerg ?>" class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
+                        <td><a class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
                     </tr>
                 <?php endforeach; ?>
             </table>
@@ -196,10 +177,7 @@ and open the template in the editor.
                         <td class="blue-text text-darken-4"><?php echo $sige->situacion_laboral_asoc ?></td>
                         <td class="blue-text text-darken-4"><?php echo $sige->lugar_trab_asoc ?></td>
                         <td class="blue-text text-darken-4"><?php echo $sige->nivel_educacional_asoc ?></td>
-                        <td><a href="editar_datos_sige.php?Id=<?php echo $sige->identificador_sige ?> 
-                               & ind=<?php echo $sige->proced_indigena ?> & lab=<?php echo $sige->situacion_laboral_asoc ?> 
-                               & lug=<?php echo $sige->lugar_trab_asoc ?> & niv=<?php echo $sige->nivel_educacional_asoc ?>" 
-                               class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
+                        <td><a class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
                     </tr>
                 <?php endforeach; ?>
             </table>
