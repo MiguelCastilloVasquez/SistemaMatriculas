@@ -13,18 +13,28 @@ and open the template in the editor.
     </head>
     <body style="background: #e7e4e5">
         <?php
-            include ("conexion_bd.php");
-            $id = filter_input(INPUT_GET, 'ID');
-            $consultaDatosPersonales = "select id_alumno, rut, a_paterno, a_materno, nombres, sexo, f_nacimiento, edad, domicilio, comuna, problema_salud from alumno where id_alumno = '$id' ";
-            $datosPersonales = $dataBase->query($consultaDatosPersonales)->fetchAll(PDO::FETCH_OBJ);
-            $consultaDatosEscolares = "select* from escolar where identificador_esc = '$id' ";
-            $datosEscolares = $dataBase->query($consultaDatosEscolares)->fetchAll(PDO::FETCH_OBJ);
-            $consultaDatosFamiliares = "select* from familiar where identificador_fam = '$id' ";
-            $datosFamiliares = $dataBase->query($consultaDatosFamiliares)->fetchAll(PDO::FETCH_OBJ);
-            $consultaDatosApoderado = "select* from apoderado where identificador_apod = '$id' ";
-            $datosApoderado = $dataBase->query($consultaDatosApoderado)->fetchAll(PDO::FETCH_OBJ);
-            $consultaDatosSige = "select* from sige where identificador_sige = '$id' ";
-            $datosSige = $dataBase->query($consultaDatosSige)->fetchAll(PDO::FETCH_OBJ);
+        session_start();
+        if (!isset($_SESSION["profesor"]) && !isset($_SESSION["administrador"])) {
+            header("location:index.php");
+        }
+
+        if (isset($_SESSION["profesor"])) {
+            $ini = "inicio_profesores.php";
+        } elseif (isset($_SESSION["administrador"])) {
+            $ini = "inicio_administrador.php";
+        }
+        include ("conexion_bd.php");
+        $id = filter_input(INPUT_GET, 'ID');
+        $consultaDatosPersonales = "select id_alumno, rut, a_paterno, a_materno, nombres, sexo, f_nacimiento, edad, domicilio, comuna, problema_salud from alumno where id_alumno = '$id' ";
+        $datosPersonales = $dataBase->query($consultaDatosPersonales)->fetchAll(PDO::FETCH_OBJ);
+        $consultaDatosEscolares = "select* from escolar where identificador_esc = '$id' ";
+        $datosEscolares = $dataBase->query($consultaDatosEscolares)->fetchAll(PDO::FETCH_OBJ);
+        $consultaDatosFamiliares = "select* from familiar where identificador_fam = '$id' ";
+        $datosFamiliares = $dataBase->query($consultaDatosFamiliares)->fetchAll(PDO::FETCH_OBJ);
+        $consultaDatosApoderado = "select* from apoderado where identificador_apod = '$id' ";
+        $datosApoderado = $dataBase->query($consultaDatosApoderado)->fetchAll(PDO::FETCH_OBJ);
+        $consultaDatosSige = "select* from sige where identificador_sige = '$id' ";
+        $datosSige = $dataBase->query($consultaDatosSige)->fetchAll(PDO::FETCH_OBJ);
         ?>
         <div class="row">
             <nav>
@@ -36,22 +46,22 @@ and open the template in the editor.
                     </ul>
                 </div>
             </nav>
-         </div>
+        </div>
         <div class="container col s12" style="margin-top: 40px;">
             <h5 class="center grey-text text-darken-1">Datos Personales</h5>
             <table class="bordered highlight centered responsive-table">
                 <thead class="blue">
-                    <th hidden>Id</th>
-                    <th class="white-text">Rut</th>
-                    <th class="white-text">Nombres</th>
-                    <th class="white-text">Ap. Paterno</th>
-                    <th class="white-text">Ap. Materno</th>
-                    <th class="white-text">Sexo</th>
-                    <th class="white-text">F. nac.</th>
-                    <th class="white-text">Edad</th>
-                    <th class="white-text">Domicilio</th>
-                    <th class="white-text">Comuna</th>
-                    <th class="white-text">Probl. Salud</th>
+                <th hidden>Id</th>
+                <th class="white-text">Rut</th>
+                <th class="white-text">Nombres</th>
+                <th class="white-text">Ap. Paterno</th>
+                <th class="white-text">Ap. Materno</th>
+                <th class="white-text">Sexo</th>
+                <th class="white-text">F. nac.</th>
+                <th class="white-text">Edad</th>
+                <th class="white-text">Domicilio</th>
+                <th class="white-text">Comuna</th>
+                <th class="white-text">Probl. Salud</th>
                 </thead>
                 <?php foreach ($datosPersonales as $personal): ?>
                     <tr>
@@ -76,39 +86,39 @@ and open the template in the editor.
             </table>
         </div>
         <div class="container col s12" style="margin-top: 40px;">
-        <h5 class="center grey-text text-darken-1">Datos Escolares</h5>
-        <table class="bordered highlight centered responsive-table">
-            <thead class="blue">
-                <tr>
-                    <th hidden="">ID</th>
-                    <th class="white-text">Procedencia</th>
-                    <th class="white-text">Fecha inc.</th>
-                    <th class="white-text">Problemas de aprend.</th>
-                    <th class="white-text">Curso repetido</th>
-                </tr>
-            </thead>
-            <?php foreach ($datosEscolares as $escolar): ?>
-                <tr>
-                    <td hidden=""><?php echo $escolar->identificador_esc ?></td>
-                    <td class="blue-text text-darken-4"><?php echo $escolar->procedencia ?></td>
-                    <td class="blue-text text-darken-4"><?php echo $escolar->fecha_incorporacion ?></td>
-                    <td class="blue-text text-darken-4"><?php echo $escolar->problema_aprend ?></td>
-                    <td class="blue-text text-darken-4"><?php echo $escolar->curso_repetido ?></td>
-                    <td class="blue-text text-darken-4"><a href="editar_datos_escolares.php?Id=<?php echo $escolar->identificador_esc?> & Proc=<?php echo $escolar->procedencia ?> 
-                           & F_inc=<?php echo $escolar->fecha_incorporacion ?> & P_apr=<?php echo $escolar->problema_aprend ?> 
-                           & Cur=<?php echo $escolar->curso_repetido ?>" class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
-                </tr>
-            <?php endforeach; ?>
-        </table>
+            <h5 class="center grey-text text-darken-1">Datos Escolares</h5>
+            <table class="bordered highlight centered responsive-table">
+                <thead class="blue">
+                    <tr>
+                        <th hidden="">ID</th>
+                        <th class="white-text">Procedencia</th>
+                        <th class="white-text">Fecha inc.</th>
+                        <th class="white-text">Problemas de aprend.</th>
+                        <th class="white-text">Curso repetido</th>
+                    </tr>
+                </thead>
+                <?php foreach ($datosEscolares as $escolar): ?>
+                    <tr>
+                        <td hidden=""><?php echo $escolar->identificador_esc ?></td>
+                        <td class="blue-text text-darken-4"><?php echo $escolar->procedencia ?></td>
+                        <td class="blue-text text-darken-4"><?php echo $escolar->fecha_incorporacion ?></td>
+                        <td class="blue-text text-darken-4"><?php echo $escolar->problema_aprend ?></td>
+                        <td class="blue-text text-darken-4"><?php echo $escolar->curso_repetido ?></td>
+                        <td class="blue-text text-darken-4"><a href="editar_datos_escolares.php?Id=<?php echo $escolar->identificador_esc ?> & Proc=<?php echo $escolar->procedencia ?> 
+                                                               & F_inc=<?php echo $escolar->fecha_incorporacion ?> & P_apr=<?php echo $escolar->problema_aprend ?> 
+                                                               & Cur=<?php echo $escolar->curso_repetido ?>" class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
         </div>
         <div class="container col s12" style="margin-top: 40px;">
             <h5 class="center grey-text text-darken-1">Datos Familiares</h5>
             <table class="bordered highlight centered responsive-table">
                 <thead class="blue">
-                    <th hidden>Id</th>
-                    <th class="white-text">Niv. Educacional Padre</th>
-                    <th class="white-text">Niv. Educacional Madre</th>
-                    <th class="white-text">Persona con quien vive</th>
+                <th hidden>Id</th>
+                <th class="white-text">Niv. Educacional Padre</th>
+                <th class="white-text">Niv. Educacional Madre</th>
+                <th class="white-text">Persona con quien vive</th>
                 </thead>
                 <?php foreach ($datosFamiliares as $familiar): ?>
                     <tr>
@@ -127,12 +137,12 @@ and open the template in the editor.
             <h5 class="center grey-text text-darken-1">Datos Apoderado</h5>
             <table class="bordered highlight centered responsive-table">
                 <thead class="blue">
-                    <th hidden>Id</th>
-                    <th class="white-text">Nombre</th>
-                    <th class="white-text">Apellido</th>
-                    <th class="white-text">Domicilio</th>
-                    <th class="white-text">Correo</th>
-                    <th class="white-text">Fono emergencia</th>
+                <th hidden>Id</th>
+                <th class="white-text">Nombre</th>
+                <th class="white-text">Apellido</th>
+                <th class="white-text">Domicilio</th>
+                <th class="white-text">Correo</th>
+                <th class="white-text">Fono emergencia</th>
                 </thead>
                 <?php foreach ($datosApoderado as $apoderado): ?>
                     <tr>
@@ -154,29 +164,29 @@ and open the template in the editor.
             <h5 class="center grey-text text-darken-1">Datos SIGE</h5>
             <table class="bordered highlight centered responsive-table">
                 <thead class="blue">
-                    <th hidden>Id</th>
-                    <th class="white-text">Procedencia indígena</th>
-                    <th class="white-text">Situación laboral persona asoc.</th>
-                    <th class="white-text">Lugar de trabajo persona asoc.</th>
-                    <th class="white-text">Nivel educacional persona asoc.</th>
+                <th hidden>Id</th>
+                <th class="white-text">Procedencia indígena</th>
+                <th class="white-text">Situación laboral persona asoc.</th>
+                <th class="white-text">Lugar de trabajo persona asoc.</th>
+                <th class="white-text">Nivel educacional persona asoc.</th>
                 </thead>
                 <?php foreach ($datosSige as $sige): ?>
-                <tr>
-                    <td hidden><?php echo $sige->identificador_sige ?></td>
-                    <td class="blue-text text-darken-4"><?php echo $sige->proced_indigena ?></td>
-                    <td class="blue-text text-darken-4"><?php echo $sige->situacion_laboral_asoc ?></td>
-                    <td class="blue-text text-darken-4"><?php echo $sige->lugar_trab_asoc ?></td>
-                    <td class="blue-text text-darken-4"><?php echo $sige->nivel_educacional_asoc ?></td>
-                    <td><a href="editar_datos_sige.php?Id=<?php echo $sige->identificador_sige ?> 
-                           & ind=<?php echo $sige->proced_indigena ?> & lab=<?php echo $sige->situacion_laboral_asoc ?> 
-                           & lug=<?php echo $sige->lugar_trab_asoc ?> & niv=<?php echo $sige->nivel_educacional_asoc ?>" 
-                           class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
-                </tr>
+                    <tr>
+                        <td hidden><?php echo $sige->identificador_sige ?></td>
+                        <td class="blue-text text-darken-4"><?php echo $sige->proced_indigena ?></td>
+                        <td class="blue-text text-darken-4"><?php echo $sige->situacion_laboral_asoc ?></td>
+                        <td class="blue-text text-darken-4"><?php echo $sige->lugar_trab_asoc ?></td>
+                        <td class="blue-text text-darken-4"><?php echo $sige->nivel_educacional_asoc ?></td>
+                        <td><a href="editar_datos_sige.php?Id=<?php echo $sige->identificador_sige ?> 
+                               & ind=<?php echo $sige->proced_indigena ?> & lab=<?php echo $sige->situacion_laboral_asoc ?> 
+                               & lug=<?php echo $sige->lugar_trab_asoc ?> & niv=<?php echo $sige->nivel_educacional_asoc ?>" 
+                               class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
+                    </tr>
                 <?php endforeach; ?>
             </table>
         </div>
-    <!-- Adjuntando los archivos JS -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/materialize.min.js"></script>
+        <!-- Adjuntando los archivos JS -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/materialize.min.js"></script>
     </body>
 </html>
