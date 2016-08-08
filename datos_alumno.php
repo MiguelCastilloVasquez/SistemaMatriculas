@@ -28,15 +28,28 @@ and open the template in the editor.
 
         include ("conexion_bd.php");
         $id = filter_input(INPUT_GET, 'ID');
+
+        //ids de tablas 
+        $consultaIdsTablas = "SELECT Apoderado_identificador_apod, Familiar_identificador_fam, Sige_identificador_sige, "
+                . "Escolar_identificador_esc, Retiro_identificador_retiro FROM ALUMNO WHERE id_alumno='$id'";
+        $resultadosIdsTablas = $dataBase->query($consultaIdsTablas)->fetchAll(PDO::FETCH_OBJ);
+        foreach ($resultadosIdsTablas as $ids) {
+            $id_apod = $ids->Apoderado_identificador_apod;
+            $id_fam = $ids->Familiar_identificador_fam;
+            $id_sige = $ids->Sige_identificador_sige;
+            $id_esc = $ids->Escolar_identificador_esc;
+            $id_ret = $ids->Retiro_identificador_retiro;
+        }
+
         $consultaDatosPersonales = "select id_alumno, rut, a_paterno, a_materno, nombres, sexo, f_nacimiento, edad, domicilio, comuna, problema_salud from alumno where id_alumno = '$id' ";
         $datosPersonales = $dataBase->query($consultaDatosPersonales)->fetchAll(PDO::FETCH_OBJ);
-        $consultaDatosEscolares = "select* from escolar where identificador_esc = '$id' ";
+        $consultaDatosEscolares = "select* from escolar where identificador_esc = '$id_esc' ";
         $datosEscolares = $dataBase->query($consultaDatosEscolares)->fetchAll(PDO::FETCH_OBJ);
-        $consultaDatosFamiliares = "select* from familiar where identificador_fam = '$id' ";
+        $consultaDatosFamiliares = "select* from familiar where identificador_fam = '$id_fam' ";
         $datosFamiliares = $dataBase->query($consultaDatosFamiliares)->fetchAll(PDO::FETCH_OBJ);
-        $consultaDatosApoderado = "select* from apoderado where identificador_apod = '$id' ";
+        $consultaDatosApoderado = "select* from apoderado where identificador_apod = '$id_apod' ";
         $datosApoderado = $dataBase->query($consultaDatosApoderado)->fetchAll(PDO::FETCH_OBJ);
-        $consultaDatosSige = "select* from sige where identificador_sige = '$id' ";
+        $consultaDatosSige = "select* from sige where identificador_sige = '$id_sige' ";
         $datosSige = $dataBase->query($consultaDatosSige)->fetchAll(PDO::FETCH_OBJ);
         ?>
         <div class="row">
@@ -45,7 +58,7 @@ and open the template in the editor.
                     <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
                     <ul class="right hide-on-med-and-down">
                         <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="cerrar_sesion.php" style=" margin-top: 3px;"><i class="material-icons">exit_to_app</i></a>
-                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="<?php echo $ini?>" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="<?php echo $ini ?>" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
                     </ul>
                 </div>
             </nav>
