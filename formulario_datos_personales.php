@@ -40,7 +40,7 @@ and open the template in the editor.
                     <div class="row">
                         <div class="input-field col s1">
                             <input disabled value="<?php echo $anio ?>" id="anio" type="text" class="validate" name="anio">
-                            <label for="anio">Año</label>
+                            <label for="anio" style="font-size: 15px;">Año</label>
                         </div>
                         <div class="input-field col s3">
                             <input id="run" type="text" class="validate" name="run" required>

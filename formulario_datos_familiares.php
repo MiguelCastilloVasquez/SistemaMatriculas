@@ -84,7 +84,7 @@
                         <label for="domicilio-tutor">Domicilio*</label>
                     </div>
                     <div class="input-field col s4">
-                        <input id="correo_tutor" type="email" class="validate" name="correo_tutor" required>
+                        <input id="correo_tutor" type="email" class="validate" name="correo_tutor">
                         <label for="correo_tutor" data-error="formato incorrecto">Correo*</label>
                     </div>
                     <div class="input-field col s3">
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <button class="btn waves-effect waves-light" type="submit" name="siguiente">Siguiente
+                    <button class="btn waves-effect waves-light green" type="submit" name="siguiente">Siguiente
                         <i class="material-icons right">fast_forward</i>
                     </button>
                 </div>

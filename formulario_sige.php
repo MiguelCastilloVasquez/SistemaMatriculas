@@ -105,8 +105,8 @@
 
                 </div>
                 <div class="row">
-                    <button class="btn waves-effect waves-light" type="submit" name="enviar">Enviar
-                        <i class="material-icons right">fast_forward</i>
+                    <button class="btn waves-effect waves-light green" type="submit" name="enviar">Enviar
+                        <i class="material-icons right">send</i>
                     </button>
                 </div>
             </form>

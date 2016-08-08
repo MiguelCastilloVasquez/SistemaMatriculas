@@ -55,7 +55,7 @@
                     <div class="input-field col s3">
                         <p class="blue-grey-text">Madre*</p>
                         <select required name="educacion_madre" class="browser-default">
-                            <option value="<?php echo $nem ?>" selected><?php echo $nep ?></option>
+                            <option value="<?php echo $nem ?>" selected><?php echo $nem ?></option>
                             <option value="Basica Incompleta">Basica Incompleta</option>
                             <option value="Basica Completa">Basica Completa</option>
                             <option value="Media Incompleta">Media Incompleta</option>
