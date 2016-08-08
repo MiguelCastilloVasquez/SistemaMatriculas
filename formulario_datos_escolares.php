@@ -70,6 +70,7 @@ and open the template in the editor.
             function verificar(){
                 var fecha = document.getElementById('incorporacion').value;
                 if(fecha.length===0){
+                    alert("Ingrese fecha de incorporacion!!");
                     return false;
                 }
                 return true;

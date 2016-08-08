@@ -138,6 +138,7 @@ and open the template in the editor.
             function verificar(){
                 var fecha = document.getElementById('nacimiento').value;
                 if(fecha.length===0){
+                    alert("Ingrese fecha de nacimiento!!");
                     return false;
                 }
                 return true;
