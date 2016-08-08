@@ -13,8 +13,8 @@
                     <form class="col s4" action="validar_profesor.php" method="post">
                         <div class="row">
                             <div class="input-field col s10">
-                                <input id="nombre" type="text" class="validate" name="nombre">
-                                <label for="nombre" class="white-text" style="font-size: 20px;">Nombre</label>
+                                <input id="correo" type="text" class="validate" name="correo">
+                                <label for="correo" class="white-text" style="font-size: 20px;">Correo</label>
                             </div>
                         </div>
                         <div class="row">

@@ -39,18 +39,26 @@
             <form class="col s12" action="registrar_profesor.php" method="post" onsubmit="return validate()">
                 <div class="row">
                     <div class="input-field col s3">
-                        <input id="usuario" type="text" class="validate" name="usuario" required/>
-                        <label>Nombre Usuario*</label>
+                        <input id="name" type="text" class="validate" name="name" required/>
+                        <label>Nombre*</label>
+                    </div>
+                    <div class="input-field col s3 offset-s1">
+                        <input id="apellido" type="text" class="validate" name="apellido" required/>
+                        <label>Apellido*</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s3">
+                        <input id="correo" type="email" class="validate" name="correo" required/>
+                        <label>Correo*</label>
                     </div>                    
                 </div>
                 <div class="row">
                     <div class="input-field col s3">
                         <input id="pass" type="password" class="validate" name="pass" required/>
                         <label>Contraseña*</label>
-                    </div>                    
-                </div>
-                <div class="row">
-                    <div class="input-field col s3">
+                    </div>
+                    <div class="input-field col s3 offset-s1">
                         <input id="repass" type="password" class="validate" name="repass" required/>
                         <label>Repita Contraseña*</label>
                     </div> 

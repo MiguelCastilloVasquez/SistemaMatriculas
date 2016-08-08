@@ -18,7 +18,7 @@ if ($conexion->connect_error) {
 }
 
 $buscarUsuario = "SELECT * FROM $tbl_name
- WHERE nombre = '$_POST[usuario]' ";
+ WHERE nombre = '$_POST[name]' ";
 
 $result = $conexion->query($buscarUsuario);
 
@@ -30,8 +30,8 @@ if ($count == 1) {
     print("<script>window.location.replace('agregar_profesor.php');</script>");
 } else {
 
-    $query = "INSERT INTO profesor (nombre, password)
-           VALUES ('$_POST[usuario]', '$_POST[pass]')";
+    $query = "INSERT INTO profesor (nombre, apellido, correo, password)
+           VALUES ('$_POST[name]', '$_POST[apellido]', '$_POST[correo]', '$_POST[pass]')";
 
     if ($conexion->query($query) === TRUE) {
         $mensaje = "Profesor Creado Correctamente";
