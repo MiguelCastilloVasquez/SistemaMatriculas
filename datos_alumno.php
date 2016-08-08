@@ -168,7 +168,9 @@ and open the template in the editor.
                         <td class="blue-text text-darken-4"><?php echo $apoderado->domicilio ?></td>
                         <td class="blue-text text-darken-4"><?php echo $apoderado->correo ?></td>
                         <td class="blue-text text-darken-4"><?php echo $apoderado->fono_emerg ?></td>
-                        <td><a class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
+                        <td><a href="editar_datos_apoderado.php?Id=<?php echo $apoderado->identificador_apod ?> & nom=<?php echo $apoderado->nombre ?>
+                               & ape=<?php echo $apoderado->apellido ?> & dom=<?php echo $apoderado->domicilio ?> & corr=<?php echo $apoderado->correo ?>
+                               & fon=<?php echo $apoderado->fono_emerg ?>" class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
                     </tr>
                 <?php endforeach; ?>
             </table>
@@ -190,7 +192,8 @@ and open the template in the editor.
                         <td class="blue-text text-darken-4"><?php echo $sige->situacion_laboral_asoc ?></td>
                         <td class="blue-text text-darken-4"><?php echo $sige->lugar_trab_asoc ?></td>
                         <td class="blue-text text-darken-4"><?php echo $sige->nivel_educacional_asoc ?></td>
-                        <td><a class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
+                        <td><a href="editar_datos_sige.php?Id=<?php echo $sige->identificador_sige ?> & ind=<?php echo $sige->proced_indigena ?> & lab=<?php echo $sige->situacion_laboral_asoc ?>
+                               & lug=<?php echo $sige->lugar_trab_asoc ?> & niv=<?php echo $sige->nivel_educacional_asoc ?>" class="btn-floating waves-effect waves-light green"><i class="material-icons">autorenew</i></a></td>
                     </tr>
                 <?php endforeach; ?>
             </table>

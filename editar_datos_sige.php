@@ -44,7 +44,7 @@
                         <p class="blue-grey-text">Procedencia Indigena</p>
                         <select name="procedencia_indigena">
                             <option value="<?php echo $ind ?>"><?php echo $ind ?></option>
-                            <option value="">Ninguna</option>
+                            <option value="Ninguna">Ninguna</option>
                             <option value="Aymara">Aymara</option>
                             <option value="Atacameño">Atacameño</option>
                             <option value="Colla">Colla</option>
