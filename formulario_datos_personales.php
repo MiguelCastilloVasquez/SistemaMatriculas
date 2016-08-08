@@ -63,6 +63,9 @@ and open the template in the editor.
                         </div>
                     </div>
                     <div class="row">
+                        <a href="listar_cursos.php" target="_blank" class="waves-effect waves-light btn green"><i class="material-icons right">visibility</i>Ver Cursos</a>
+                    </div>
+                    <div class="row">
                         <div class="input-field col s3">
                             <input id="paterno" type="text" class="validate" name="paterno" required>
                             <label for="paterno">Apellido Paterno*</label>
@@ -86,10 +89,6 @@ and open the template in the editor.
                             </select>
 
                         </div>
-                        <div class="input-field col s3">
-                            <input id="nacimiento" type="date" class="datepicker" name="nacimiento">
-                            <label for="nacimiento">Fecha de Nacimiento*</label>
-                        </div>
                         <div class="input-field col s2">
                             <p class="left">Edad*</p>
                             <select name="edad" required class="browser-default">
@@ -108,6 +107,10 @@ and open the template in the editor.
                         </div>
                     </div>
                     <div class="row">
+                        <div class="input-field col s3">
+                            <input id="nacimiento" type="date" class="datepicker" name="nacimiento">
+                            <label for="nacimiento">Fecha de Nacimiento*</label>
+                        </div>
                         <div class="input-field col s5">
                             <input id="domicilio" type="text" class="validate" name="domicilio" required>
                             <label for="domicilio">Domicilio*</label>
