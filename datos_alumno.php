@@ -109,7 +109,7 @@ and open the template in the editor.
                         <th hidden="">ID</th>
                         <th class="white-text">Procedencia</th>
                         <th class="white-text">Fecha inc.</th>
-                        <th class="white-text">Problemas de aprend.</th>
+                        <th class="white-text">Problemas de aprend.(C/S)</th>
                         <th class="white-text">Curso repetido</th>
                     </tr>
                 </thead>

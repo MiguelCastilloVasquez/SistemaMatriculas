@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body>
+    <body style="background: #e5e4e4">
         <?php
         session_start();
         if (!isset($_SESSION["profesor"])) {
@@ -29,7 +29,7 @@
                     <div class="col s4">
                         <p>Procedencia Indigena</p>
                         <select name="procedencia_indigena">
-                            <option value="">Ninguna</option>
+                            <option value="Ninguna">Ninguna</option>
                             <option value="Aymara">Aymara</option>
                             <option value="Atacameño">Atacameño</option>
                             <option value="Colla">Colla</option>

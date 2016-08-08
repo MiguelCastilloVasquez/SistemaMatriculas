@@ -85,7 +85,7 @@
                     </div>
                     <div class="input-field col s4">
                         <input id="correo_tutor" type="email" class="validate" name="correo_tutor">
-                        <label for="correo_tutor" data-error="formato incorrecto">Correo*</label>
+                        <label for="correo_tutor" data-error="formato incorrecto">Correo</label>
                     </div>
                     <div class="input-field col s3">
                         <input id="emergencia-tutor" type="text" class="validate" name="emergencia_tutor" required>
