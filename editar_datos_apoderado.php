@@ -12,9 +12,9 @@
             header("location:index.php");
         }
         if(isset($_SESSION["profesor"])){
-            $ho = "inicio_profesores.php";
+            $hai = "inicio_profesores.php";
         }elseif(isset($_SESSION["administrador"])){
-            $ho = "inicio_administrador.php";
+            $hai = "inicio_administrador.php";
         }
         $id = filter_input(INPUT_GET, 'Id');
         $nom = filter_input(INPUT_GET, 'nom');
@@ -29,7 +29,7 @@
                     <a class="brand-logo"><img src="img/adven2.png" class="left"></a>
                     <ul class="right hide-on-med-and-down">
                         <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="cerrar_sesion.php" style=" margin-top: 3px;"><i class="material-icons">exit_to_app</i></a>
-                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="<?php echo $h?>" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
+                        <a class="btn-floating btn-large waves-effect waves-light green darken-4 right" href="<?php echo $hai?>" style=" margin-top: 3px;"><i class="material-icons">home</i></a>
                     </ul>
                 </div>
             </nav>
