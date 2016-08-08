@@ -60,8 +60,8 @@
                         <label for="correo_tutor" data-error="formato incorrecto">Correo*</label>
                     </div>
                     <div class="input-field col s3">
-                        <input id="emergencia-tutor" type="text" class="validate" name="emergencia_tutor" required value="<?php echo $fon ?>">
-                        <label for="emergencia-tutor" data-error="formato incorrecto">Numero emergencia*</label>
+                        <input id="emergencia-tutor" type="text" class="validate" name="emergencia_tutor"<?php echo $fon ?>">
+                        <label for="emergencia-tutor" data-error="formato incorrecto">Numero emergencia</label>
                     </div>
                 </div>
                 <div class="row">

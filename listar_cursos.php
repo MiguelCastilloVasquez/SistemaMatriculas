@@ -14,6 +14,10 @@ and open the template in the editor.
     <body style="background: #e7e4e5">
         <?php
         include ("conexion_bd.php");
+        session_start();
+        if (!isset($_SESSION["profesor"])) {
+            header("location:index.php");
+        }
         $anio = date ("Y");
         $consultaDatosCurso = "select identificador_curso, seccion, anio_curso from curso "
                 . "where anio_curso = '$anio' ";

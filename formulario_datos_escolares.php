@@ -32,7 +32,7 @@ and open the template in the editor.
         </div>
         <div class="container">
             <div class="row">
-                <form action="formulario_datos_familiares.php" method="post">
+                <form action="formulario_datos_familiares.php" method="post" onsubmit="return verificar()">
                     <div class="row">
                         <div class="input-field col s4">
                             <input id="procedencia" type="text" class="validate" name="procedencia" required="">
@@ -66,6 +66,15 @@ and open the template in the editor.
                 </form>
             </div>
         </div>
+        <script>
+            function verificar(){
+                var fecha = document.getElementById('incorporacion').value;
+                if(fecha.length===0){
+                    return false;
+                }
+                return true;
+            }
+        </script>
         <script src="js/jquery.min.js"></script>
         <script src="js/materialize.min.js"></script>
         <script>

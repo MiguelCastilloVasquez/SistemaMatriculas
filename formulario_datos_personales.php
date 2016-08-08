@@ -36,7 +36,7 @@ and open the template in the editor.
         </div>
         <div class="container">
             <div class="row">
-                <form class="col s12" action="formulario_datos_escolares.php" method="post">
+                <form class="col s12" action="formulario_datos_escolares.php" method="post" onsubmit="return verificar()">
                     <div class="row">
                         <div class="input-field col s1">
                             <input disabled value="<?php echo $anio ?>" id="anio" type="text" class="validate" name="anio">
@@ -134,6 +134,15 @@ and open the template in the editor.
                 </form>
             </div>
         </div>
+        <script>
+            function verificar(){
+                var fecha = document.getElementById('nacimiento').value;
+                if(fecha.length===0){
+                    return false;
+                }
+                return true;
+            }
+        </script>
         <!-- Adjuntando los archivos JS -->
         <script src="js/jquery.min.js"></script>
         <script src="js/materialize.min.js"></script>
