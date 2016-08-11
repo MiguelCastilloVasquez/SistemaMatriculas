@@ -8,7 +8,7 @@
     <body>
         <?php
         session_start();
-        if (!isset($_SESSION["profesor"]) && !isset($_SESSION["administrador"])) {
+        if (!isset($_SESSION["administrador"])) {
             header("location:index.php");
         }
         ?>

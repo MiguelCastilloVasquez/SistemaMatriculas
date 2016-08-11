@@ -10,11 +10,10 @@
 
         <?php
         session_start();
-        if (!isset($_SESSION["profesor"])) {
+        if (!isset($_SESSION["administrador"])) {
             header("location:index.php");
         }
-        ?>
-        <?php
+        
         include("conexion_bd.php");
         $annio = filter_input(INPUT_POST, 'anio_curso');
         $consultaDatos = "SELECT * "
